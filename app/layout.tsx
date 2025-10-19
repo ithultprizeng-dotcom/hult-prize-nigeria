@@ -46,6 +46,12 @@ export const metadata: Metadata = {
   },
 };
 
+const figtree = Figtree({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-figtree",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${figtree.variable}`}>{children}</body>
     </html>
   );
 }
