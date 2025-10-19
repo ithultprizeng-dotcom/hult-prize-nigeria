@@ -13,9 +13,21 @@
   --gallery: #ffffff;
   --black: #191919;
   --orange: #ff931d;
-  --font-fig: "Figtree", sans-serif;
+  --font-figtree: "Figtree", sans-serif;
 }
 
 @theme inline {
-  
+  --font-figtree: var(--font-figtree);
+  --color-pink: var(--pink);
+  --color-midnight: var(--midnight);
+  --color-purple: var(--purple);
+  --color-red: var(--red);
+  --color-sky: var(--sky);
+  --color-navy: var(--navy);
+  --color-sun: var(--sun);
+  --color-spring: var(--spring);
+  --color-aloe: var(--aloe);
+  --color-gallery: var(--gallery);
+  --color-black: var(--black);
+  --color-orange: var(--orange);
 }
