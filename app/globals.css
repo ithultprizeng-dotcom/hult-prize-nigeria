@@ -44,6 +44,15 @@
   &:hover {
     clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 10% 100%, 0% 50%, 10% 0%);
     transform: translateX(-10px);
+  }
+}
+
+.button.reversed {
+  clip-path: polygon(0% 0, 100% 0, 90% 50%, 100% 100%, 0% 100%, 0% 0%);
+  transition: all 200ms ease-out;
+  &:hover {
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
+    transform: translateX(10px);
     background-color: var(--midnight);
   }
 }
