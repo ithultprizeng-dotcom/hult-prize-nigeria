@@ -9,7 +9,7 @@ import { redirect } from "next/navigation";
 
 export default function Header() {
   return (
-    <header className="flex px-8 py-4 justify-between items-center">
+    <header className="flex px-8 py-8 justify-between items-center">
       <Link href={"/"}>
         <Image
           src={hult_prize_nigeria_logo}
