@@ -44,6 +44,7 @@
   &:hover {
     clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 10% 100%, 0% 50%, 10% 0%);
     transform: translateX(-10px);
+    background-color: var(--midnight);
   }
 }
 
