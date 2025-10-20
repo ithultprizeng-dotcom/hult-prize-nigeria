@@ -1,3 +1,19 @@
+import center_image from "../../public/images/image11.jpg";
+import image_one from "../../public/images/image.jpg";
+import image_two from "../../public/images/image0.jpg";
+import image_three from "../../public/images/image1.jpg";
+import image_four from "../../public/images/image2.jpg";
+import image_five from "../../public/images/image3.jpg";
+import image_six from "../../public/images/image4.jpg";
+import image_seven from "../../public/images/image5.jpg";
+import image_eight from "../../public/images/image6.jpg";
+import image_nine from "../../public/images/image7.jpg";
+import image_ten from "../../public/images/image8.jpg";
+import image_eleven from "../../public/images/image9.jpg";
+import image_twelve from "../../public/images/image10.jpg";
+import image_thirteen from "../../public/images/image12.jpg";
+import { StaticImageData } from "next/image";
+
 export interface NavlinksType {
   href: string;
   title: string;
@@ -10,3 +26,20 @@ export const NAVLINKS: NavlinksType[] = [
   { href: "hult-prize-winners", title: "winners + finalists" },
   { href: "about-hult-prize", title: "about us" },
 ];
+
+export const IMAGES: { [key: string]: StaticImageData } = {
+  center_image,
+  image_one,
+  image_two,
+  image_three,
+  image_four,
+  image_five,
+  image_six,
+  image_seven,
+  image_eight,
+  image_nine,
+  image_ten,
+  image_eleven,
+  image_twelve,
+  image_thirteen,
+};
