@@ -50,6 +50,7 @@ function HeroGrid() {
             src={IMAGES.image_one}
             alt="Hult prize 2025 participants"
             className="w-[200px] h-[180px] object-cover hover:scale-110 duration-300 ease-in"
+            placeholder="blur"
           />
         </div>
         <div className="overflow-hidden  rounded-lg">
@@ -57,6 +58,7 @@ function HeroGrid() {
             src={IMAGES.image_two}
             alt="Hult prize 2025 participants"
             className="w-[100px] h-[100px] object-cover hover:scale-110 duration-300 ease-in"
+            placeholder="blur"
           />
         </div>
       </div>
@@ -65,6 +67,7 @@ function HeroGrid() {
           src={IMAGES.center_image}
           alt="Hult prize 2025 participants"
           className="w-[250px] h-[400px] hover:scale-110 ease-in-out duration-300 object-cover"
+          placeholder="blur"
         />
       </div>
       <div className="flex flex-col gap-1.5 pt-6 mb-auto items-start">
@@ -73,6 +76,7 @@ function HeroGrid() {
             src={IMAGES.image_three}
             alt="Hult prize 2025 participants"
             className="w-[200px] h-[200px] hover:scale-110 duration-300 ease-in object-cover"
+            placeholder="blur"
           />
         </div>
         <div className="overflow-hidden rounded-lg grow-0">
@@ -80,6 +84,7 @@ function HeroGrid() {
             src={IMAGES.image_four}
             alt="Hult prize 2025 participants"
             className="w-[100px] h-[100px] hover:scale-110 duration-300 ease-in object-cover"
+            placeholder="blur"
           />
         </div>
       </div>{" "}

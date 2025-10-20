@@ -15,6 +15,7 @@ export default function Header() {
           src={hult_prize_nigeria_logo}
           alt="home page logo icon"
           className="w-[60px] aspect-1.154/1 object-cover"
+          placeholder="blur"
         />
       </Link>
       <nav className="flex gap-8 items-center">
