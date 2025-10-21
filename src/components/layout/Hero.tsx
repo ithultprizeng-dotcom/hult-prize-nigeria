@@ -57,7 +57,7 @@ function HeroGrid() {
           <Image
             src={IMAGES.image_two}
             alt="Hult prize 2025 participants"
-            className="w-[100px] h-[100px] object-cover hover:scale-110 duration-300 ease-in"
+            className="w-[100px] h-[100px] object-cover hover:scale-110 duration-300 ease-in object-top"
             placeholder="blur"
           />
         </div>
