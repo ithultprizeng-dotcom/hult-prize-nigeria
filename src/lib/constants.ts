@@ -43,3 +43,15 @@ export const IMAGES: { [key: string]: StaticImageData } = {
   image_twelve,
   image_thirteen,
 };
+
+export interface Intro_Stat {
+  figure: string | number;
+  caption: string;
+}
+
+export const INTRO_STATS: Intro_Stat[] = [
+  { figure: "40+", caption: "participating institutions" },
+  { figure: "200+", caption: "student startups" },
+  { figure: "1000+", caption: "student enterpreneurs" },
+  { figure: 1, caption: "national winner" },
+];
