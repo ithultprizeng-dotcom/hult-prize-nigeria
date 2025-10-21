@@ -12,7 +12,7 @@ import image_ten from "../../public/images/image8.jpg";
 import image_eleven from "../../public/images/image9.jpg";
 import image_twelve from "../../public/images/image10.jpg";
 import image_thirteen from "../../public/images/image12.jpg";
-import { StaticImageData } from "next/image";
+import { type StaticImageData } from "next/image";
 
 export interface NavlinksType {
   href: string;
