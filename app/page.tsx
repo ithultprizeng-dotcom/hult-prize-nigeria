@@ -9,23 +9,8 @@ export default function Home() {
       <Hero />
       <SectionDivisionOne />
       <Intro />
-      <section className="h-50 flex items-end bg-pink overflow-hidden">
-        <div className="bg-white h-50 w-50 rounded-tr-full flex justify-end items-start flex-col gap-1 pl-2">
-          <div className="flex gap-1 justify-center items-center">
-            <div className="size-10 bg-aloe rounded-full"></div>
-            <div className="size-10 bg-pink rounded-tr-full"></div>
-            <div className="size-10 bg-aloe rounded-full"></div>
-          </div>
-          <div className="flex gap-1 justify-center items-center">
-            <div className="size-10 bg-pink rounded-tr-full"></div>
-            <div className="size-10 bg-aloe rounded-full"></div>
-            <div className="size-10 bg-pink rounded-tl-full"></div>
-          </div>
-        </div>
-        <div className="size-40 rotate-45 translate-y-[50%] translate-x-[-30px] bg-white ml-auto flex justify-center items-center">
-          <div className="rounded-full size-15 bg-pink -translate-5"></div>
-        </div>
-      </section>
+      <SectionDivisionTwo />
+      <div className="bg-white w-full h-30"></div>
     </>
   );
 }
@@ -41,6 +26,28 @@ const SectionDivisionOne = () => {
         {["", "", ""].map((item, index) => (
           <div key={index} className="h-20 bg-pink w-40 rounded-t-full"></div>
         ))}
+      </div>
+    </section>
+  );
+};
+
+const SectionDivisionTwo = () => {
+  return (
+    <section className="h-50 flex items-end bg-pink overflow-hidden">
+      <div className="bg-white h-50 w-50 rounded-tr-full flex justify-end items-start flex-col gap-1 pl-2">
+        <div className="flex gap-1 justify-center items-center">
+          <div className="size-10 bg-aloe rounded-full"></div>
+          <div className="size-10 bg-pink rounded-tr-full"></div>
+          <div className="size-10 bg-aloe rounded-full"></div>
+        </div>
+        <div className="flex gap-1 justify-center items-center">
+          <div className="size-10 bg-pink rounded-tr-full"></div>
+          <div className="size-10 bg-aloe rounded-full"></div>
+          <div className="size-10 bg-pink rounded-tl-full"></div>
+        </div>
+      </div>
+      <div className="size-40 rotate-45 translate-y-[50%] translate-x-[-30px] bg-white ml-auto flex justify-center items-center">
+        <div className="rounded-full size-15 bg-pink -translate-5"></div>
       </div>
     </section>
   );
