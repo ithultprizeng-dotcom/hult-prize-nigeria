@@ -12,6 +12,10 @@ import image_ten from "../../public/images/image8.jpg";
 import image_eleven from "../../public/images/image9.jpg";
 import image_twelve from "../../public/images/image10.jpg";
 import image_thirteen from "../../public/images/image12.jpg";
+import institution_icon from "../../public/images/institution-icon.png";
+import startup_icon from "../../public/images/startup-icon.png";
+import student_icon from "../../public/images/student-icon.png";
+import winner_icon from "../../public/images/winner-icon.png";
 import { type StaticImageData } from "next/image";
 
 export interface NavlinksType {
@@ -47,11 +51,16 @@ export const IMAGES: { [key: string]: StaticImageData } = {
 export interface Intro_Stat {
   figure: string | number;
   caption: string;
+  imageSrc: StaticImageData;
 }
 
 export const INTRO_STATS: Intro_Stat[] = [
-  { figure: "40+", caption: "participating institutions" },
-  { figure: "200+", caption: "student startups" },
-  { figure: "1000+", caption: "student enterpreneurs" },
-  { figure: 1, caption: "national winner" },
+  {
+    figure: "40+",
+    caption: "participating institutions",
+    imageSrc: institution_icon,
+  },
+  { figure: "200+", caption: "student startups", imageSrc: startup_icon },
+  { figure: "1000+", caption: "student enterpreneurs", imageSrc: student_icon },
+  { figure: 1, caption: "national winner", imageSrc: winner_icon },
 ];
