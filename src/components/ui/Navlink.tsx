@@ -5,7 +5,7 @@ export default function Navlink({ href, title }: NavlinksType) {
   return (
     <Link
       href={href}
-      className="text-caption font-figtree text-midnight font-semibold capitalize hover:tracking-wide duration-200 hover:text-pink"
+      className="text-caption font-body text-midnight font-semibold capitalize hover:tracking-wide duration-200 hover:text-pink"
     >
       {title}
     </Link>
