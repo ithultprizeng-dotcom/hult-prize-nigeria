@@ -4,7 +4,7 @@ import { IMAGES } from "@/src/lib/constants";
 export default function HomePageAbout() {
   return (
     <section className="min-h-screen bg-white relative px-8 py-20">
-      <div className="absolute inset-0 bg-[url('/images/green-background.png')] blur-[50px] contrast-125 saturate-150 brightness-120 bg-no-repeat bg-top"></div>
+      <div className="absolute inset-0 bg-[url('/images/green-background.png')] blur-[50px] contrast-125 saturate-150 brightness-120 bg-no-repeat bg-center"></div>
       <div className="isolate flex flex-col gap-12">
         <h2 className="font-black text-black text-hero flex flex-col leading-[1.2] text-stroke pl-0.5">
           <span className="font-body">We Are</span>{" "}
