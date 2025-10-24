@@ -4,7 +4,6 @@ import Button from "../ui/Button";
 import Image from "next/image";
 import { IMAGES } from "@/src/lib/constants";
 import blob_image from "../../../public/images/blob (1).png";
-import iregular_squares from "../../../public/images/irregular (1).png";
 
 export default function Hero() {
   return (
@@ -16,7 +15,7 @@ export default function Hero() {
             Impact!
           </span>{" "}
         </h1>
-        <p className="text-navy text-body-lg font-medium font-figtree max-w-[45ch] text-balance">
+        <p className="text-navy text-body-lg font-medium font-body max-w-[45ch] text-balance">
           Join the world's largest student competition and build a for-profit
           social enterprise that solves the planet's most pressing challenges.
         </p>
