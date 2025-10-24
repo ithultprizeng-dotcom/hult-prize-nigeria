@@ -48,7 +48,13 @@ const SectionDivisionTwo = () => {
         </div>
       </div>
       <div className="size-40 rotate-45 translate-y-[50%] translate-x-[-30px] bg-white ml-auto flex justify-center items-center">
-        <div className="rounded-full size-15 bg-aloe -translate-6"></div>
+        <div className="rounded-full size-15 bg-pink -translate-6 grid place-items-center">
+          <div className="rounded-md size-7 bg-white grid place-items-center">
+            <div className="rounded size-4 bg-aloe grid place-items-center">
+              <div className="rounded size-2 bg-white"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
