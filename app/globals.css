@@ -15,10 +15,12 @@
   --orange: #ff931d;
   --text-white: #e0e0e0;
   --font-figtree: "Figtree", sans-serif;
+  --font-body: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 @theme inline {
   --font-figtree: var(--font-figtree);
+  --font-body: var(--font-body);
   --color-pink: var(--pink);
   --color-midnight: var(--midnight);
   --color-purple: var(--purple);
@@ -58,4 +60,14 @@
     transform: translateX(10px);
     background-color: var(--midnight);
   }
+}
+
+.text-stroke {
+  background: conic-gradient(var(--pink), var(--sun), var(--aloe)) 50%;
+  width: fit-content;
+  color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 5px;
 }
