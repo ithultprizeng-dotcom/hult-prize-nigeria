@@ -71,3 +71,10 @@
   -webkit-text-stroke-color: transparent;
   -webkit-text-stroke-width: 5px;
 }
+
+.feature-card:nth-child(2) h3{
+  color: var(--pink);
+}
+.feature-card:nth-child(2) p:nth-child(2) {
+  color: var(--aloe);
+}
