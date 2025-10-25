@@ -2,6 +2,7 @@ import Header from "@/src/components/layout/Header";
 import Hero from "@/src/components/layout/Hero";
 import HomePageAbout from "@/src/components/layout/HomePageAbout";
 import Intro from "@/src/components/layout/Intro";
+import Features from "@/src/components/layout/Features";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Intro />
       <SectionDivisionTwo />
       <HomePageAbout />
+      <Features />
     </>
   );
 }
