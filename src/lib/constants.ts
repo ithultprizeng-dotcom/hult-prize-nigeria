@@ -13,7 +13,7 @@ import image_eleven from "../../public/images/image9.jpg";
 import image_twelve from "../../public/images/image10.jpg";
 import image_thirteen from "../../public/images/image12.jpg";
 import image_fourteen from "../../public/images/image13.jpg";
-import image_fifteen from "../../public/images/image14.jpg";
+import image_fifteen from "../../public/images/image14.png";
 import image_sixteen from "../../public/images/image15.png";
 import institution_icon from "../../public/images/institution-icon.png";
 import startup_icon from "../../public/images/startup-icon.png";
@@ -71,12 +71,14 @@ export const INTRO_STATS: Intro_Stat[] = [
   { figure: 1, caption: "national winner", imageSrc: winner_icon },
 ];
 
-export const FEATURES_CONTENT: {
+export interface FeaturesContentType {
   feature_title: string;
   feature_tagline: string;
   feature_content: string;
   feature_image: StaticImageData;
-}[] = [
+}
+
+export const FEATURES_CONTENT: FeaturesContentType[] = [
   {
     feature_title: "Mentorship and Network",
     feature_tagline: "World Class mentorship",
@@ -96,6 +98,12 @@ export const FEATURES_CONTENT: {
     feature_tagline: "Beyond the Campus",
     feature_content:
       "Compete directly for the $1 Million global seed investment and significant local funding opportunities. This is your chance to secure the capital required to turn your purpose-driven idea into a profit-making reality.",
-    feature_image: image_fifteen,
+    feature_image: image_nine,
   },
+];
+
+export const maskImages: string[] = [
+  "/images/mask_image.svg",
+  "/images/brushstroke.png.png",
+  "/images/mask-bg.png",
 ];
