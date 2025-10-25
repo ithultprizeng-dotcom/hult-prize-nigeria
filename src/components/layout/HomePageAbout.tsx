@@ -30,7 +30,7 @@ export default function HomePageAbout() {
               <h3 className="font-body font-bold text-3xl text-[#555] leading-[1.2]">
                 Catalyzing Social Innovation in Nigeria
               </h3>
-              <p className="font-body font-normal text-[#909090] leading-[1.4] max-w-[50ch] text-body text-balance">
+              <p className="font-body font-normal text-[#808089] leading-[1.5] tracking-[1px] max-w-[50ch] text-body text-pretty">
                 The Hult Prize challenges university students to solve pressing
                 global issues through scalable, sustainable social enterprises.
                 In Nigeria, we provide a vital platform for future leaders to
