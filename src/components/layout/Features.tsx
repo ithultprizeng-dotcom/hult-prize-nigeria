@@ -1,11 +1,6 @@
 "use client";
-import {
-  FEATURES_CONTENT,
-  FeaturesContentType,
-  maskImages,
-} from "@/src/lib/constants";
-import Image from "next/image";
-import cn from "@/src/lib/utils";
+import { FEATURES_CONTENT, maskImages } from "@/src/lib/constants";
+import FeatureCard from "../ui/FeatureCard";
 
 export default function Features() {
   return (
@@ -14,7 +9,7 @@ export default function Features() {
         <h2 className="font-figtree font-bold text-sub-heading text-aloe cap">
           Why Hult Prize?
         </h2>
-        <p className="font-body text-body text-black leading-[1.5] max-w-prose text-pretty">
+        <p className="font-body text-body text-black leading-[1.5] max-w-prose text-balance tracking-[1px]">
           The Hult Prize is more than a competition; it is a dedicated pipeline
           designed to transform student ideas into investment-ready global
           ventures. Here is how we empower the next generation of Nigerian
@@ -34,43 +29,5 @@ export default function Features() {
         ))}
       </section>
     </section>
-  );
-}
-
-interface FeatureCardProps extends FeaturesContentType {
-  maskImagePath: string;
-}
-
-function FeatureCard({
-  feature_title,
-  feature_tagline,
-  feature_image,
-  feature_content,
-  maskImagePath,
-}: FeatureCardProps) {
-  return (
-    <div className="flex gap-24 items-center even:flex-row-reverse justify-center feature-card">
-      <div className="w-[40%]">
-        <h3 className="font-figtree font-bold text-sub-heading text-aloe capitalize max-w-[30ch] text-balance leading-[1.3]">
-          {feature_title}
-        </h3>
-        <p className="font-body font-bold text-body-lg text-black capitalize">
-          {feature_tagline}
-        </p>
-        <p className="mt-6 font-body text-body text-[#909090] max-w-[45ch] leading-[1.5]">
-          {feature_content}
-        </p>
-      </div>
-      <Image
-        src={feature_image}
-        alt={feature_title}
-        className={cn(`size-100 object-cover rounded-full`)}
-        style={{
-          maskImage: `url(${maskImagePath})`,
-          maskSize: "cover",
-          maskPosition: "center",
-        }}
-      />
-    </div>
   );
 }
