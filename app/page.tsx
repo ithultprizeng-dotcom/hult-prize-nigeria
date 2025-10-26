@@ -7,7 +7,7 @@ import Ideas from "@/src/components/layout/Ideas";
 
 export default function Home() {
   return (
-    <>
+    <main className="mx-auto max-w-[1440px]">
       <Header />
       <Hero />
       <SectionDivisionOne />
@@ -16,7 +16,7 @@ export default function Home() {
       <HomePageAbout />
       <Features />
       <Ideas />
-    </>
+    </main>
   );
 }
 
