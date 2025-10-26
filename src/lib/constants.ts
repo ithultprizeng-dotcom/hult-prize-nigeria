@@ -20,6 +20,8 @@ import startup_icon from "../../public/images/startup-icon.png";
 import student_icon from "../../public/images/student-icon.png";
 import winner_icon from "../../public/images/winner-icon.png";
 import { type StaticImageData } from "next/image";
+import { ReactElement } from "react";
+import { PrecisionFarmingSolution } from "../components/ui/SvgIcons";
 
 export interface NavlinksType {
   href: string;
@@ -106,4 +108,88 @@ export const maskImages: string[] = [
   "/images/mask_image.svg",
   "/images/brushstroke.png.png",
   "/images/mask-bg.png",
+];
+
+interface InnovativeIdeasTypes {
+  category: string;
+  focusArea: string;
+  description: string;
+}
+
+export const INNOVATIVE_IDEAS_CONTENT: InnovativeIdeasTypes[] = [
+  {
+    category: "agriTech",
+    focusArea: " Precision Agriculture",
+    description: "Optimizating yields via data",
+  },
+  {
+    category: "agriTech",
+    focusArea: " Cold Chain Logistics",
+    description: "Reducing Post-Harvest Loss",
+  },
+  {
+    category: "education",
+    focusArea: "Vocational Skill Platforms",
+    description: "Bridging the skills gap",
+  },
+  {
+    category: "education",
+    focusArea: "Local Language Learning ",
+    description: "Digital tools for indigenous languages",
+  },
+  {
+    category: "energy",
+    focusArea: "Off-Grid Solar Solutions",
+    description: "Powering unconnected communities",
+  },
+  {
+    category: "environment",
+    focusArea: "Waste-to-Wealth",
+    description: "Recycling and upcycling solutions",
+  },
+  {
+    category: "environment",
+    focusArea: "Water Quality Monitoring",
+    description: "Accessible testing and purification",
+  },
+  {
+    category: "finTech",
+    focusArea: "Micro-Lending for SMEs",
+    description: "Access to capital",
+  },
+  {
+    category: "healthTech",
+    focusArea: "Telemedicine for Rural Areas",
+    description: "Remote Diagnostics",
+  },
+  {
+    category: "healthTech",
+    focusArea: "Drug Authenticity Tech",
+    description: "Combatting counterfeit medicine",
+  },
+  {
+    category: "civicTech",
+    focusArea: "Digital ID Verification",
+    description: "Secure, accessible identity",
+  },
+  {
+    category: "logistics",
+    focusArea: "Last-Mile Delivery Solutions",
+    description: "Efficient urban and inter-state delivery",
+  },
+  {
+    category: "logistics",
+    focusArea: "Public Transit Mapping",
+    description: "Real-Time tracking and routing for buses/keke",
+  },
+  {
+    category: "housing",
+    focusArea: "Affordable Housing Tech",
+    description: "Sustainable and low cost housing, easier renting",
+  },
+  {
+    category: "creative economy",
+    focusArea: "Digital Arts Marketplace",
+    description: "Monetizing local creative content",
+  },
 ];
