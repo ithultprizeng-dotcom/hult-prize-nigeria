@@ -4,6 +4,9 @@ import HomePageAbout from "@/src/components/layout/HomePageAbout";
 import Intro from "@/src/components/layout/Intro";
 import Features from "@/src/components/layout/Features";
 import Ideas from "@/src/components/layout/Ideas";
+import dynamic from "next/dynamic";
+
+const Media = dynamic(() => import("@/src/components/layout/Media"));
 
 export default function Home() {
   return (
@@ -16,6 +19,7 @@ export default function Home() {
       <HomePageAbout />
       <Features />
       <Ideas />
+      <Media />
     </main>
   );
 }
