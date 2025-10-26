@@ -20,8 +20,7 @@ import startup_icon from "../../public/images/startup-icon.png";
 import student_icon from "../../public/images/student-icon.png";
 import winner_icon from "../../public/images/winner-icon.png";
 import { type StaticImageData } from "next/image";
-import { ReactElement } from "react";
-import { PrecisionFarmingSolution } from "../components/ui/SvgIcons";
+
 
 export interface NavlinksType {
   href: string;
