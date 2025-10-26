@@ -72,7 +72,18 @@
   -webkit-text-stroke-width: 5px;
 }
 
-.feature-card:nth-child(2) h3{
+.idea-main-text {
+  background: linear-gradient(to right, var(--aloe), var(--pink));
+  width: fit-content;
+  color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 4px;
+  letter-spacing: 1.5px;
+}
+
+.feature-card:nth-child(2) h3 {
   color: var(--pink);
 }
 .feature-card:nth-child(2) p:nth-child(2) {
