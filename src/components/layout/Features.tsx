@@ -6,7 +6,7 @@ export default function Features() {
   return (
     <section className="px-8 py-20 min-h-dvh flex flex-col gap-12">
       <div className="flex flex-col gap-2">
-        <h2 className="font-figtree font-bold text-sub-heading text-aloe cap">
+        <h2 className="font-figtree font-bold text-main-heading text-aloe">
           Why Hult Prize?
         </h2>
         <p className="font-body text-body text-black leading-[1.5] max-w-prose text-balance tracking-[1px]">
