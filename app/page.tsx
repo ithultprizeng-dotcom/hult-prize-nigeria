@@ -3,6 +3,7 @@ import Hero from "@/src/components/layout/Hero";
 import HomePageAbout from "@/src/components/layout/HomePageAbout";
 import Intro from "@/src/components/layout/Intro";
 import Features from "@/src/components/layout/Features";
+import Ideas from "@/src/components/layout/Ideas";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <SectionDivisionTwo />
       <HomePageAbout />
       <Features />
+      <Ideas />
     </>
   );
 }
