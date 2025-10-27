@@ -6,6 +6,7 @@ import Features from "@/src/components/layout/Features";
 import Ideas from "@/src/components/layout/Ideas";
 import dynamic from "next/dynamic";
 import Ecosystem from "@/src/components/layout/Ecosystem";
+import Testimonial from "@/src/components/layout/Testimonial";
 
 const Media = dynamic(() => import("@/src/components/layout/Media"));
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Ideas />
       <Media />
       <Ecosystem />
+      <Testimonial />
     </main>
   );
 }
