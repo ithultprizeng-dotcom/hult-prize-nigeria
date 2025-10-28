@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
+import Footer from "@/src/components/layout/Footer";
+import Header from "@/src/components/layout/Header";
 
 export const metadata: Metadata = {
   title: "Hult Prize Nigeria",
@@ -85,7 +87,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${figtree.variable}`}>{children}</body>
+      <body className={`${figtree.variable} mx-auto max-w-[1440px]`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
