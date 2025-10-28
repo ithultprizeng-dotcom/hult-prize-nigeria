@@ -72,6 +72,19 @@
   -webkit-text-stroke-width: 5px;
 }
 
+.footer-stroke {
+  color: var(--black);
+  background: linear-gradient(
+    to right,
+    var(--pink),
+    var(--gallery),
+    var(--aloe)
+  );
+  background-clip: text;
+  letter-spacing: 5px;
+  -webkit-text-stroke-width: 8px;
+}
+
 .idea-main-text {
   background: linear-gradient(to right, var(--aloe), var(--pink));
   width: fit-content;
@@ -107,4 +120,3 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--pink);
 }
-
