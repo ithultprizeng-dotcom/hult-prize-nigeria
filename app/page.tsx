@@ -12,8 +12,7 @@ const Media = dynamic(() => import("@/src/components/layout/Media"));
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-[1440px]">
-      <Header />
+    <main>
       <Hero />
       <SectionDivisionOne />
       <Intro />
