@@ -62,6 +62,76 @@
   }
 }
 
+.button.hov-pink {
+  &:hover {
+    background-color: var(--black);
+  }
+}
+
+.article-image {
+  clip-path: polygon(
+    10% 0%,
+    80% 0%,
+    80% 10%,
+    90% 10%,
+    90% 20%,
+    100% 20%,
+    100% 90%,
+    90% 100%,
+    20% 100%,
+    20% 90%,
+    10% 90%,
+    10% 80%,
+    0% 80%,
+    0% 10%
+  );
+  position: relative;
+}
+
+.article-image.animate-path {
+  animation: clip-change 2s ease-out infinite alternate;
+}
+
+@keyframes clip-change {
+  from {
+    clip-path: polygon(
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      100% 0%,
+      100% 0%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      0% 100%,
+      0% 100%,
+      0% 0%,
+      0% 0%
+    );
+  }
+
+  to {
+    clip-path: polygon(
+      10% 0%,
+      80% 0%,
+      80% 10%,
+      90% 10%,
+      90% 20%,
+      100% 20%,
+      100% 90%,
+      90% 100%,
+      20% 100%,
+      20% 90%,
+      10% 90%,
+      10% 80%,
+      0% 80%,
+      0% 10%
+    );
+  }
+}
+
 .text-stroke {
   background: conic-gradient(var(--pink), var(--sun), var(--aloe)) 50%;
   width: fit-content;
