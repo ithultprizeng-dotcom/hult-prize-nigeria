@@ -142,7 +142,7 @@
   -webkit-text-stroke-width: 5px;
 }
 
-.footer-stroke {
+.footer-stroke, .not-found {
   color: var(--black);
   background: linear-gradient(
     to right,
