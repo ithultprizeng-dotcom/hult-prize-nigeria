@@ -142,7 +142,8 @@
   -webkit-text-stroke-width: 5px;
 }
 
-.footer-stroke, .not-found {
+.footer-stroke,
+.not-found {
   color: var(--black);
   background: linear-gradient(
     to right,
@@ -155,7 +156,8 @@
   -webkit-text-stroke-width: 8px;
 }
 
-.idea-main-text {
+.idea-main-text,
+.not-found {
   background: linear-gradient(to right, var(--aloe), var(--pink));
   width: fit-content;
   color: white;
@@ -231,5 +233,5 @@
 }
 
 .blog-content ul {
-  list-style:square;
+  list-style: square;
 }
