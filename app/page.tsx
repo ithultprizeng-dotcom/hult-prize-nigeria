@@ -8,6 +8,7 @@ import dynamic from "next/dynamic";
 import Ecosystem from "@/src/components/layout/Ecosystem";
 import Testimonial from "@/src/components/layout/Testimonial";
 
+const Blogs = dynamic(() => import("@/src/components/layout/Blogs"));
 const Media = dynamic(() => import("@/src/components/layout/Media"));
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Features />
       <Ideas />
       <Media />
+      <Blogs />
       <Ecosystem />
       <Testimonial />
     </main>
