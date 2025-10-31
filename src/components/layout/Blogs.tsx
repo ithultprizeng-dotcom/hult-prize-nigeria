@@ -56,7 +56,8 @@ export default function Blogs() {
         </button>
         <button
           className={cn(`cursor-pointer backdrop:blur-2xl block`, {
-            "cursor-not-allowed opacity-0 hidden": currentSlide === numOfSlides - 1,
+            "cursor-not-allowed opacity-0 hidden":
+              currentSlide === numOfSlides - 1,
           })}
           onClick={rightButtonClick}
         >
@@ -78,7 +79,8 @@ export default function Blogs() {
           >
             {BlogPosts.map((eachBlogPost, index) => (
               <BlogCard
-                key={index}
+                id={eachBlogPost.id}
+                key={eachBlogPost.id}
                 imageSrc={eachBlogPost.imageSrc}
                 title={eachBlogPost.title}
                 author={eachBlogPost.author}
