@@ -2,16 +2,23 @@
 import { BlogCardType } from "@/src/lib/constants";
 import Image from "next/image";
 import Button from "./Button";
-export default function BlogCard({ title, imageSrc, author }: BlogCardType) {
+import { useRouter } from "next/navigation";
+export default function BlogCard({
+  id,
+  title,
+  imageSrc,
+  author,
+}: BlogCardType) {
+  const router = useRouter();
   return (
     <article className="flex flex-col gap-10 w-[350px]">
       <div className="grid grid-cols-1 w-[350px] h-[350px]">
-        <div className="article-image bg-aloe col-start-1 col-end-2 row-start-1 row-end-2 z-2 relative">
+        <div className="article-image bg-aloe col-start-1 col-end-2 row-start-1 row-end-2 z-2 relative group overflow-clip">
           <Image
             src={imageSrc}
             alt="group photograh"
             fill
-            className="object-cover"
+            className="object-cover group-hover:scale-120 duration-300 ease-out"
           />
         </div>
         <div className="article-image bg-black col-start-1 col-end-2 row-start-1 row-end-2 z-0 -translate-x-2 translate-y-2"></div>
@@ -27,6 +34,9 @@ export default function BlogCard({ title, imageSrc, author }: BlogCardType) {
         <Button
           text="read blog"
           classnames="reversed button hov-pink bg-pink grow-0 w-fit pr-8 hover:bg-black"
+          onclick={() => {
+            router.push(`/blogs/${id}`);
+          }}
         />
       </div>
     </article>
