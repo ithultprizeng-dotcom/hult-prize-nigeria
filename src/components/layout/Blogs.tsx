@@ -1,26 +1,33 @@
 "use client";
 import BlogCard from "../ui/BlogCard";
-import { BlogPosts } from "@/src/lib/constants";
 import { CircleChevronLeft, CircleChevronRight } from "lucide-react";
-import { useState } from "react";
 import cn from "@/src/lib/utils";
+import { useState, useEffect } from "react";
+import { fetchBlogs } from "@/src/lib/services";
+import { BlogAPIResponseData } from "@/src/lib/types";
 
 export default function Blogs() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const [haveAllSlidesBeenViewed, setSlidesViewStatus] =
-    useState<boolean>(false);
-  const numOfSlides = BlogPosts.length;
+
+  const [blogData, setBlogData] = useState<BlogAPIResponseData[] | null>(null);
+  useEffect(() => {
+    async function getBlogPosts() {
+      const blogPostsData = await fetchBlogs();
+      if (blogPostsData) setBlogData(() => blogPostsData.data);
+    }
+    getBlogPosts();
+  }, []);
+  const numOfSlides = blogData?.length;
   const slideTotalWidthPlusGap = 123;
   const rightButtonClick = () => {
-    setCurrentSlide((prev) => {
-      console.log(prev);
-      if (prev < numOfSlides - 1) return prev + 1;
-      return prev;
-    });
+    numOfSlides &&
+      setCurrentSlide((prev) => {
+        if (prev < numOfSlides - 1) return prev + 1;
+        return prev;
+      });
   };
   const leftButtonClick = () => {
     setCurrentSlide((prev) => {
-      console.log(prev);
       if (prev > 0) return prev - 1;
       return prev;
     });
@@ -43,7 +50,7 @@ export default function Blogs() {
       <div className="relative">
         <button
           className={cn(`cursor-pointer backdrop:blur-2xl block`, {
-            "cursor-not-allowed opacity-0 hidden": currentSlide === 0,
+            "cursor-not-allowed opacity-20": currentSlide === 0,
           })}
           onClick={leftButtonClick}
         >
@@ -56,15 +63,18 @@ export default function Blogs() {
         </button>
         <button
           className={cn(`cursor-pointer backdrop:blur-2xl block`, {
-            "cursor-not-allowed opacity-0 hidden":
-              currentSlide === numOfSlides - 1,
+            "cursor-not-allowed opacity-20":
+              numOfSlides && currentSlide === numOfSlides - 1,
           })}
           onClick={rightButtonClick}
         >
           <CircleChevronRight
             className={cn(
               "h-15 w-15 text-aloe -right-10 top-[50%] absolute hover:text-pink duration-200",
-              { "hover:text-red-800": currentSlide === numOfSlides - 1 }
+              {
+                "hover:text-red-800":
+                  numOfSlides && currentSlide === numOfSlides - 1,
+              }
             )}
           />
         </button>
@@ -77,13 +87,13 @@ export default function Blogs() {
               }%)`,
             }}
           >
-            {BlogPosts.map((eachBlogPost, index) => (
+            {blogData?.map((each_blog_data) => (
               <BlogCard
-                id={eachBlogPost.id}
-                key={eachBlogPost.id}
-                imageSrc={eachBlogPost.imageSrc}
-                title={eachBlogPost.title}
-                author={eachBlogPost.author}
+                id={each_blog_data.id}
+                key={each_blog_data.id}
+                imageSrc={each_blog_data.image_url}
+                title={each_blog_data.title.replaceAll("\\", "")}
+                author={each_blog_data.authour}
               />
             ))}
           </div>
