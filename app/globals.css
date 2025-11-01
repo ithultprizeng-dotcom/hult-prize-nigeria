@@ -205,6 +205,7 @@
 
 .blog-content h2 {
   font-size: var(--text-sub-heading);
+  color: var(--black);
 }
 
 .blog-content h3 {
