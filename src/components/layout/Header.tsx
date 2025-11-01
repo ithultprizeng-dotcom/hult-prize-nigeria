@@ -19,7 +19,7 @@ export default function Header() {
         />
       </Link>
       <nav className="flex gap-8 items-center">
-        <div className="flex items-center gap-6">
+        <div className=" items-center gap-6 hidden">
           {NAVLINKS.map((each_link, index) => (
             <Navlink
               key={index}

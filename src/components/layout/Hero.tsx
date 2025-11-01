@@ -21,7 +21,7 @@ export default function Hero() {
         </p>
         <Button
           text="find out more"
-          onclick={() => redirect("/how-it-works")}
+          // onclick={() => redirect("/how-it-works")}
           classnames="w-fit reversed pl-4 pr-6"
         />
       </div>
