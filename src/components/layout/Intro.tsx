@@ -51,7 +51,7 @@ function StatCard({
   return (
     <div
       className={cn(
-        `flex justify-center items-center flex-col gap-4 bg-[#f0f0f0] w-[90vw] md:w-[min(50%,280px)] h-[350px] text-center font-figtree text-black rounded-3xl border-2 border-black even:border-white even:bg-pink even:text-white hover:translate-y-2.5 duration-300 ease-out `,
+        `flex justify-center items-center flex-col gap-4 bg-[#f0f0f0] w-[clamp(50px,90vw,280px)] h-[350px] text-center font-figtree text-black rounded-3xl border-2 border-black even:border-white even:bg-pink even:text-white hover:translate-y-2.5 duration-300 ease-out `,
         classnames
       )}
       style={{
