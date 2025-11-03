@@ -18,8 +18,8 @@ export default function Header() {
           placeholder="blur"
         />
       </Link>
-      <nav className="flex gap-12 items-center">
-        <Navlink href="/team" title="Our Team"/>
+      <nav className="flex gap-2 md:gap-12 items-center">
+        <Navlink href="/team" title="Our Team" />
         <div className=" items-center gap-6 hidden">
           {NAVLINKS.map((each_link, index) => (
             <Navlink
@@ -29,12 +29,22 @@ export default function Header() {
             />
           ))}
         </div>
-        <Button
-          text="Register to compete"
-          onclick={() => {
-            redirect("https://www.hultprize.org/register/");
-          }}
-        />
+        <div className="hidden md:block">
+          <Button
+            text="Register to compete"
+            onclick={() => {
+              redirect("https://www.hultprize.org/register/");
+            }}
+          />
+        </div>
+        <div className="md:hidden">
+          <Button
+            text="Register"
+            onclick={() => {
+              redirect("https://www.hultprize.org/register/");
+            }}
+          />
+        </div>
       </nav>
     </header>
   );
