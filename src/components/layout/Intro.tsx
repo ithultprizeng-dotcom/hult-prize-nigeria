@@ -1,8 +1,10 @@
+"use client";
+
 import Button from "../ui/Button";
 import cn from "@/src/lib/utils";
 import { type Intro_Stat, INTRO_STATS } from "@/src/lib/constants";
 import { ClassValue } from "clsx";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 export default function Intro() {
   return (
@@ -27,6 +29,7 @@ export default function Intro() {
             figure={introStat.figure}
             caption={introStat.caption}
             imageSrc={introStat.imageSrc}
+            rotateValue={introStat.rotateValue}
           />
         ))}
       </div>
@@ -38,9 +41,13 @@ interface StatCardProps extends Intro_Stat {
   classnames?: ClassValue;
 }
 
-const rotateValues: number[] = [4, 5, 6, -4, -5, -6];
-
-function StatCard({ figure, caption, imageSrc, classnames }: StatCardProps) {
+function StatCard({
+  figure,
+  caption,
+  imageSrc,
+  classnames,
+  rotateValue,
+}: StatCardProps) {
   return (
     <div
       className={cn(
@@ -48,9 +55,7 @@ function StatCard({ figure, caption, imageSrc, classnames }: StatCardProps) {
         classnames
       )}
       style={{
-        transform: `rotate(${
-          rotateValues[Math.floor(Math.random() * rotateValues.length)]
-        }deg)`,
+        transform: `rotate(${rotateValue}deg)`,
       }}
     >
       <Image
@@ -61,8 +66,12 @@ function StatCard({ figure, caption, imageSrc, classnames }: StatCardProps) {
         placeholder="blur"
       />
       <div className="flex justify-center items-center flex-col">
-        <h3 className="text-main-heading font-bold font-figtree leading-[1]">{figure}</h3>
-        <p className="text-body-lg font-semibold font-figtree capitalize">{caption}</p>
+        <h3 className="text-main-heading font-bold font-figtree leading-[1]">
+          {figure}
+        </h3>
+        <p className="text-body-lg font-semibold font-figtree capitalize">
+          {caption}
+        </p>
       </div>
     </div>
   );
