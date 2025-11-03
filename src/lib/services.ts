@@ -20,8 +20,8 @@ export async function fetchSingleBlogPost(
   return data;
 }
 
-export async function fetchBOGTeam() {
-  const response = await fetchData(
+export async function fetchBOGTeam(): Promise<TeamAPIResponse[]> {
+  const response: TeamAPIResponse[] = await fetchData(
     "/team?role_type=BOG",
     "Sorry we could not fetch the Board of Governance team at this time"
   );
@@ -29,8 +29,8 @@ export async function fetchBOGTeam() {
   return response;
 }
 
-export async function fetchExecutiveTeam(): Promise<TeamAPIResponse> {
-  const response: TeamAPIResponse = await fetchData(
+export async function fetchExecutiveTeam(): Promise<TeamAPIResponse[]> {
+  const response: TeamAPIResponse[] = await fetchData(
     "/team?role_type=EX",
     "Sorry we could not fetch the Executive team at this time"
   );
