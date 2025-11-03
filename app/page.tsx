@@ -1,4 +1,3 @@
-import Header from "@/src/components/layout/Header";
 import Hero from "@/src/components/layout/Hero";
 import HomePageAbout from "@/src/components/layout/HomePageAbout";
 import Intro from "@/src/components/layout/Intro";
@@ -7,8 +6,7 @@ import Ideas from "@/src/components/layout/Ideas";
 import dynamic from "next/dynamic";
 import Ecosystem from "@/src/components/layout/Ecosystem";
 import Testimonial from "@/src/components/layout/Testimonial";
-
-const Blogs = dynamic(() => import("@/src/components/layout/Blogs"));
+import Blogs from "@/src/components/layout/Blogs";
 const Media = dynamic(() => import("@/src/components/layout/Media"));
 
 export default function Home() {
