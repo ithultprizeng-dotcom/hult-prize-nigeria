@@ -40,7 +40,7 @@ export default function Footer() {
             </h5>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap- hidden">
             {NAVLINKS.map((navlink, index) => (
               <Link
                 href={navlink.href}
