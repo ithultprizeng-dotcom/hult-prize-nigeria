@@ -11,7 +11,7 @@ const Media = dynamic(() => import("@/src/components/layout/Media"));
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Hero />
       <SectionDivisionOne />
       <Intro />
@@ -29,14 +29,17 @@ export default function Home() {
 
 const SectionDivisionOne = () => {
   return (
-    <section className="h-40 flex items-end">
+    <section className="h-25 md:h-40 flex items-end">
       <div className="flex items-end gap-3">
-        <div className="h-30 w-30 bg-aloe rounded-tr-[200%]"></div>
-        <div className="h-25 w-25 bg-aloe rotate-45 translate-y-[50%]"></div>
+        <div className="size-10 md:size-20 lg:size-30 bg-aloe rounded-tr-[200%]"></div>
+        <div className="size-8 md:size-15 lg:size-25 bg-aloe rotate-45 translate-y-[50%]"></div>
       </div>
       <div className="ml-auto flex gap-0.5">
         {["", "", ""].map((item, index) => (
-          <div key={index} className="h-20 bg-aloe w-40 rounded-t-full"></div>
+          <div
+            key={index}
+            className="h-10 w-15 md:h-15 md:w-25 lg:h-20 bg-aloe lg:w-40 rounded-t-full"
+          ></div>
         ))}
       </div>
     </section>
