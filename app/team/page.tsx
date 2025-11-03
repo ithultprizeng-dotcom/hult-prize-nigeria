@@ -85,7 +85,7 @@ export default function Team() {
                       eachMember.first_name + " " + eachMember.last_name
                     }`}
                     fill
-                    className="object-cover bg-aloe object-top group-hover:scale-105 duration-200 group-hover:saturate-150"
+                    className="object-cover bg-aloe object-top group-hover:scale-105 duration-200 group-hover:saturate-120"
                   />
                 </div>
                 <div>
