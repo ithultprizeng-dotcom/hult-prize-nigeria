@@ -9,16 +9,17 @@ import { redirect } from "next/navigation";
 
 export default function Header() {
   return (
-    <header className="flex px-8 py-8 justify-between items-center">
+    <header className="flex px-4 sm:px-8 py-8 justify-between items-center">
       <Link href={"/"}>
         <Image
           src={hult_prize_nigeria_logo}
           alt="home page logo icon"
-          className="w-[60px] aspect-1.154/1 object-cover"
+          className="w-12 sm:w-[60px] aspect-1.154/1 object-cover"
           placeholder="blur"
         />
       </Link>
-      <nav className="flex gap-8 items-center">
+      <nav className="flex gap-12 items-center">
+        <Navlink href="/team" title="Our Team"/>
         <div className=" items-center gap-6 hidden">
           {NAVLINKS.map((each_link, index) => (
             <Navlink
