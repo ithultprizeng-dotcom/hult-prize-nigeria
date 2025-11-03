@@ -48,14 +48,14 @@ export default function Team() {
                 key={eachMember.id}
                 className="flex flex-col gap-2 w-[min(85vw,350px)] "
               >
-                <div className="relative w-full aspect-square rounded-tl-[20px] rounded-br-[20px] shadow-[0px_2px_10px_0px_rgba(0,0,0,0.25),0px_5px_15px_0px_rgba(0,0,0,0.45)] overflow-hidden py-2">
+                <div className="relative w-full aspect-square rounded-tl-[20px] rounded-br-[20px] shadow-[0px_2px_10px_0px_rgba(0,0,0,0.25),0px_5px_15px_0px_rgba(0,0,0,0.45)] overflow-hidden py-2 group ">
                   <Image
                     src={eachMember.image_url}
                     alt={`${
                       eachMember.first_name + " " + eachMember.last_name
                     }`}
                     fill
-                    className="bg-aloe"
+                    className="bg-aloe object-cover object-top group-hover:scale-105 duration-200 group-hover:saturate-150"
                   />
                 </div>
                 <div>
@@ -68,23 +68,24 @@ export default function Team() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 items-center">
           <h3 className="font-body font-semibold text-[24px] text-aloe tracking-[1.2px] uppercase underline underline-offset-6 decoration-double ">
             The Executives{" "}
           </h3>
-          <div className="flex flex-wrap items-stretch gap-8">
+          <div className="flex flex-wrap items-stretch justify-center gap-8">
             {executiveTeam?.map((eachMember) => (
               <div
                 key={eachMember.id}
-                className="flex flex-col gap-2 w-[min(85vw,350px)] "
+                className="flex flex-col items-center gap-2 w-[min(85vw,350px)] "
               >
-                <div className="relative w-full aspect-square rounded-tl-[20px] rounded-br-[20px] shadow-[0px_2px_10px_0px_rgba(0,0,0,0.3),0px_5px_15px_0px_rgba(0,0,0,0.3)] overflow-hidden py-2">
+                <div className="relative w-full aspect-square rounded-tl-[20px] rounded-br-[20px] shadow-[0px_2px_10px_0px_rgba(0,0,0,0.3),0px_5px_15px_0px_rgba(0,0,0,0.3)] overflow-hidden py-2 group">
                   <Image
                     src={eachMember.image_url}
                     alt={`${
                       eachMember.first_name + " " + eachMember.last_name
                     }`}
                     fill
+                    className="object-cover bg-aloe object-top group-hover:scale-105 duration-200 group-hover:saturate-150"
                   />
                 </div>
                 <div>
