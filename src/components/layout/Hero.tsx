@@ -7,9 +7,9 @@ import blob_image from "../../../public/images/blob (1).png";
 
 export default function Hero() {
   return (
-    <section className="flex px-8 py-4 mt-6 min-h-dvh items-center relative">
-      <div className="flex flex-col gap-6 w-1/2">
-        <h1 className="font-figtree font-bold text-main-heading text-midnight  max-w-prose leading-[1.3] text-balance capitalize">
+    <section className="flex px-4 flex-col md:flex-row sm:px-8 py-4 mt-6 min-h-dvh items-center relative">
+      <div className="flex flex-col gap-4 sm:gap-6 md:w-1/2">
+        <h1 className="font-figtree font-bold text-main-heading text-midnight  max-w-prose leading-[1.4] md:leading-[1.3] text-balance capitalize">
           Igniting Nigerian Ingenuity for Global{" "}
           <span className="bg-pink text-white px-4 py-1 rounded-lg">
             Impact!
