@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import hult_prize_nigeria_logo from "../../../public/HP_NigeriaHP.png";
 import Link from "next/link";
@@ -31,7 +31,7 @@ export default function Header() {
         <Button
           text="Register to compete"
           onclick={() => {
-            redirect("/register");
+            redirect("https://www.hultprize.org/register/");
           }}
         />
       </nav>
