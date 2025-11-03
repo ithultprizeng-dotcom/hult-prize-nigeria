@@ -1,33 +1,49 @@
-import { BlogAPIResponse, BlogAPIResponseData } from "./types";
+import { BlogAPIResponse, BlogAPIResponseData, TeamAPIResponse } from "./types";
 
 const BASEURL = process.env.NEXT_PUBLIC_API_BASEURL;
 
 export async function fetchBlogs(): Promise<BlogAPIResponse> {
-  if (!BASEURL) throw new Error("API baseURL is not defined!");
-  const blogEndPoint = "/blog";
-  const fullAPIURL = BASEURL + blogEndPoint;
-  const blogResponse = await fetch(fullAPIURL);
-
-  if (!blogResponse.ok)
-    throw new Error(
-      "We could not fetch the blog posts at this time. Please try again later."
-    );
-  const blogData: BlogAPIResponse = await blogResponse.json();
-  return blogData;
+  const data: BlogAPIResponse = await fetchData(
+    "/blog",
+    "Sorry, we are unable to fetch the blogs at this time"
+  );
+  return data;
 }
 
 export async function fetchSingleBlogPost(
   blogId: string
 ): Promise<BlogAPIResponseData> {
-  if (!BASEURL) throw new Error("API baseURL is not defined!");
-  const blogEndPoint = `/blog/${blogId}`;
-  const fullAPIURL = BASEURL + blogEndPoint;
-  const blogResponse = await fetch(fullAPIURL);
+  const data: BlogAPIResponseData = await fetchData(
+    `/blog/${blogId}`,
+    "Sorry, we could not fetch your blog at this time"
+  );
+  return data;
+}
 
-  if (!blogResponse.ok)
-    throw new Error(
-      "We could not fetch this blog post. Please try again later."
-    );
-  const blogData: BlogAPIResponseData = await blogResponse.json();
-  return blogData;
+export async function fetchBOGTeam() {
+  const response = await fetchData(
+    "/team?role_type=BOG",
+    "Sorry we could not fetch the Board of Governance team at this time"
+  );
+  console.log(response);
+  return response;
+}
+
+export async function fetchExecutiveTeam(): Promise<TeamAPIResponse> {
+  const response: TeamAPIResponse = await fetchData(
+    "/team?role_type=EX",
+    "Sorry we could not fetch the Executive team at this time"
+  );
+  console.log("The EXECUTIVE TEAM: ", response);
+  return response;
+}
+
+async function fetchData(endPoint: string, errorMessage: string) {
+  if (!BASEURL) throw new Error("API baseURL is not defined!");
+  const fullAPIURL = BASEURL + endPoint;
+  const response = await fetch(fullAPIURL);
+
+  if (!response.ok) throw new Error(errorMessage);
+  const data = await response.json();
+  return data;
 }
