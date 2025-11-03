@@ -54,8 +54,13 @@ export default function Footer() {
               Hult Prize Nigeria
             </h5>
           </div>
-
-          <div className=" flex-col gap- hidden">
+          <Link
+            href={"/team"}
+            className="font-body font-medium text-body text-gallery capitalize hover:text-aloe duration-200"
+          >
+            Our Team
+          </Link>
+          <div className="flex-col gap-4 hidden">
             {NAVLINKS.map((navlink, index) => (
               <Link
                 href={navlink.href}
