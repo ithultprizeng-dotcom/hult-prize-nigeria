@@ -7,15 +7,15 @@ import blob_image from "../../../public/images/blob (1).png";
 
 export default function Hero() {
   return (
-    <section className="flex px-4 flex-col md:flex-row sm:px-8 py-4 mt-6 min-h-dvh items-center relative">
-      <div className="flex flex-col gap-4 sm:gap-6 md:w-1/2">
-        <h1 className="font-figtree font-bold text-main-heading text-midnight  max-w-prose leading-[1.4] md:leading-[1.3] text-balance capitalize">
+    <section className="flex px-4 flex-col lg:flex-row sm:px-8 py-4 mt-6 min-h-dvh items-center gap-8 lg:gap-0 relative">
+      <div className="flex flex-col items-center lg:items-start gap-4 sm:gap-6 lg:w-1/2">
+        <h1 className="font-figtree font-bold text-main-heading text-midnight  max-w-prose leading-[1.4] md:leading-[1.3] text-balance capitalize text-center lg:text-left">
           Igniting Nigerian Ingenuity for Global{" "}
           <span className="bg-pink text-white px-4 py-1 rounded-lg">
             Impact!
           </span>{" "}
         </h1>
-        <p className="text-navy text-body-lg font-medium font-body max-w-[45ch] text-balance">
+        <p className="text-navy text-body-lg font-medium font-body max-w-[45ch] text-balance text-center lg:text-left">
           Join the world's largest student competition and build a for-profit
           social enterprise that solves the planet's most pressing challenges.
         </p>
@@ -35,54 +35,54 @@ export default function Hero() {
 
 function HeroGrid() {
   return (
-    <div className="flex gap-1.5 items-center h-fit relative">
+    <div className="flex md:flex-row flex-col gap-1.5 items-center h-fit relative">
       <Image
         src={blob_image}
         alt="blob image"
         aria-hidden="true"
         placeholder="blur"
-        className="absolute top-[-100px] left-[-30px] w-60 object-contain saturate-150 contrast-120"
+        className=" md:absolute top-[-100px] left-[-30px] w-40 lg:w-60 object-contain saturate-150 contrast-120"
       />
-      <div className="flex flex-col items-end gap-1.5 mt-auto pb-3">
-        <div className="overflow-hidden rounded-lg">
+      <div className="flex w-full md:w-auto md:flex-col md:items-end gap-1.5 md:mt-auto md:pb-3">
+        <div className="overflow-hidden grow md:grow-0 rounded-lg w-[48%] md:w-auto">
           <Image
             src={IMAGES.image_one}
             alt="Hult prize 2025 participants"
-            className="w-[200px] h-[180px] object-cover hover:scale-110 duration-300 ease-in"
+            className="w-full md:w-[200px] aspect-square md:aspect-auto md:h-[180px] object-cover hover:scale-110 duration-300 ease-in"
             placeholder="blur"
           />
         </div>
-        <div className="overflow-hidden  rounded-lg">
+        <div className="overflow-hidden rounded-lg md:grow-0 grow w-[48%] md:w-auto">
           <Image
             src={IMAGES.image_two}
             alt="Hult prize 2025 participants"
-            className="w-[100px] h-[100px] object-cover hover:scale-110 duration-300 ease-in object-top"
+            className="md:w-[100px] md:h-[100px] w-full aspect-square md:aspect-auto object-cover hover:scale-110 duration-300 ease-in object-top"
             placeholder="blur"
           />
         </div>
       </div>
-      <div className="rounded-lg overflow-hidden">
+      <div className="rounded-lg overflow-hidden w-full md:w-auto">
         <Image
           src={IMAGES.center_image}
           alt="Hult prize 2025 participants"
-          className="w-[250px] h-[400px] hover:scale-110 ease-in-out duration-300 object-cover"
+          className="md:w-[250px] md:h-[400px] w-full aspect-[1/1.5] md:aspect-auto hover:scale-110 ease-in-out duration-300 object-cover object-top"
           placeholder="blur"
         />
       </div>
-      <div className="flex flex-col gap-1.5 pt-6 mb-auto items-start">
-        <div className="overflow-hidden rounded-lg">
+      <div className="flex w-full md:w-auto md:flex-col gap-1.5 md:pt-6 md:mb-auto items-start">
+        <div className="overflow-hidden rounded-lg w-[50%] md:w-auto">
           <Image
             src={IMAGES.image_three}
             alt="Hult prize 2025 participants"
-            className="w-[200px] h-[200px] hover:scale-110 duration-300 ease-in object-cover"
+            className="md:w-[200px] md:h-[200px] w-full aspect-square md:aspect-auto hover:scale-110 duration-300 ease-in object-cover"
             placeholder="blur"
           />
         </div>
-        <div className="overflow-hidden rounded-lg grow-0">
+        <div className="overflow-hidden rounded-lg grow-0 w-[50%] md:w-auto">
           <Image
             src={IMAGES.image_four}
             alt="Hult prize 2025 participants"
-            className="w-[100px] h-[100px] hover:scale-110 duration-300 ease-in object-cover"
+            className="md:w-[100px] md:h-[100px] w-full aspect-square md:aspect-auto hover:scale-110 duration-300 ease-in object-cover"
             placeholder="blur"
           />
         </div>
