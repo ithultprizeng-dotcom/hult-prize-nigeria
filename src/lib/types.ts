@@ -15,3 +15,15 @@ export interface BlogAPIResponseData {
   created_at: Date;
   updated_at: Date;
 }
+
+export interface TeamAPIResponse {
+  id: string;
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
+  first_name: string;
+  last_name: string;
+  role: string;
+  role_type: string;
+  image_url: string;
+}
