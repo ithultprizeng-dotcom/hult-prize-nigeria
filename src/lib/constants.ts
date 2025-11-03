@@ -59,6 +59,7 @@ export interface Intro_Stat {
   figure: string | number;
   caption: string;
   imageSrc: StaticImageData;
+  rotateValue: number;
 }
 
 export const INTRO_STATS: Intro_Stat[] = [
@@ -66,10 +67,26 @@ export const INTRO_STATS: Intro_Stat[] = [
     figure: "40+",
     caption: "participating institutions",
     imageSrc: institution_icon,
+    rotateValue: 2,
   },
-  { figure: "200+", caption: "student startups", imageSrc: startup_icon },
-  { figure: "1000+", caption: "student enterpreneurs", imageSrc: student_icon },
-  { figure: 1, caption: "national winner", imageSrc: winner_icon },
+  {
+    figure: "200+",
+    caption: "student startups",
+    imageSrc: startup_icon,
+    rotateValue: -5,
+  },
+  {
+    figure: "1000+",
+    caption: "student enterpreneurs",
+    imageSrc: student_icon,
+    rotateValue: 6,
+  },
+  {
+    figure: 1,
+    caption: "national winner",
+    imageSrc: winner_icon,
+    rotateValue: -2,
+  },
 ];
 
 export interface FeaturesContentType {
