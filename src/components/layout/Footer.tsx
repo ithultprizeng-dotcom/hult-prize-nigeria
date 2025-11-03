@@ -5,7 +5,7 @@ import Link from "next/link";
 import { NAVLINKS } from "@/src/lib/constants";
 import spiral from "../../../public/images/green-twist-intricate.png";
 import spiral_one from "../../../public/images/pink-spiral.png";
-import spiral_two from '../../../public/images/green-twist-original.png'
+import spiral_two from "../../../public/images/green-twist-original.png";
 
 export default function Footer() {
   return (
@@ -19,9 +19,24 @@ export default function Footer() {
         }}
       />
       <div className="w-full flex justify-center relative">
-        <Image src={spiral} alt="spiral" aria-hidden="true" className="absolute -left-10 top-0 h-[150px] object-contain" />
-        <Image src={spiral_one} alt="spiral" aria-hidden="true" className="absolute right-0 -bottom-10 h-[150px] object-contain" />
-        <Image src={spiral_two} alt="spiral" aria-hidden="true" className="absolute right-[50%] -bottom-20 translate-x-[50%] h-[150px] object-contain -rotate-60" />
+        <Image
+          src={spiral}
+          alt="spiral"
+          aria-hidden="true"
+          className="absolute -left-10 top-0 h-[150px] object-contain"
+        />
+        <Image
+          src={spiral_one}
+          alt="spiral"
+          aria-hidden="true"
+          className="absolute right-0 -bottom-10 h-[150px] object-contain"
+        />
+        <Image
+          src={spiral_two}
+          alt="spiral"
+          aria-hidden="true"
+          className="absolute right-[50%] -bottom-20 translate-x-[50%] h-[150px] object-contain -rotate-60"
+        />
         <h2 className="text-stroke footer-stroke font-body font-black text-[10vw] text-center uppercase mx-auto">
           Hult prize
         </h2>
@@ -40,7 +55,7 @@ export default function Footer() {
             </h5>
           </div>
 
-          <div className="flex flex-col gap- hidden">
+          <div className=" flex-col gap- hidden">
             {NAVLINKS.map((navlink, index) => (
               <Link
                 href={navlink.href}
