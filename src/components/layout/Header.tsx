@@ -19,8 +19,7 @@ export default function Header() {
         />
       </Link>
       <nav className="flex gap-2 md:gap-12 items-center">
-        <Navlink href="/team" title="Our Team" />
-        <div className=" items-center gap-6 hidden">
+        <div className=" items-center gap-6 flex">
           {NAVLINKS.map((each_link, index) => (
             <Navlink
               key={index}
