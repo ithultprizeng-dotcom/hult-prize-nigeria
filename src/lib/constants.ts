@@ -20,7 +20,6 @@ import startup_icon from "../../public/images/startup-icon.png";
 import student_icon from "../../public/images/student-icon.png";
 import winner_icon from "../../public/images/winner-icon.png";
 import { type StaticImageData } from "next/image";
-import { text } from "stream/consumers";
 
 export interface NavlinksType {
   href: string;
@@ -28,11 +27,13 @@ export interface NavlinksType {
 }
 
 export const NAVLINKS: NavlinksType[] = [
-  { href: "competition", title: "the competition" },
-  { href: "how-it-works", title: "how it works" },
-  { href: "get-involved", title: "get involved" },
-  { href: "hult-prize-winners", title: "winners + finalists" },
-  { href: "about-hult-prize", title: "about us" },
+  // { href: "competition", title: "the competition" },
+  // { href: "how-it-works", title: "how it works" },
+  // { href: "get-involved", title: "get involved" },
+  // { href: "hult-prize-winners", title: "winners + finalists" },
+  // { href: "about-hult-prize", title: "about us" },
+  { href: "/team", title: "our team" },
+  { href: "#blogs", title: "blogs" },
 ];
 
 export const IMAGES: { [key: string]: StaticImageData } = {
