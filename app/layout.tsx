@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "Hult Prize Nigeria",
     images: [
       {
-        url: "https://www.hultprize-ng.com/static/media/1R5A5099.b7e8976f0a83f7d05046.jpg",
+        url: "https://www.hultprize-ng.com/static/media/HP_Nigeria.f7edcad161fd6e584852.png",
         width: 1200,
         height: 630,
         alt: "Hult Prize Nigeria Logo and Challenge Banner",
