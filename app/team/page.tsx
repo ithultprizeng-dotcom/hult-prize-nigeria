@@ -48,14 +48,14 @@ export default function Team() {
                 key={eachMember.id}
                 className="flex flex-col gap-2 w-[min(85vw,350px)] "
               >
-                <div className="relative w-full aspect-square rounded-tl-[20px] rounded-br-[20px] shadow-[0px_2px_10px_0px_rgba(0,0,0,0.25),0px_5px_15px_0px_rgba(0,0,0,0.45)] overflow-hidden py-2 group ">
+                <div className="relative w-full aspect-square rounded-tl-[20px] rounded-br-[20px] shadow-[0px_4px_15px_0px_rgba(0,0,0,0.4)] overflow-hidden py-2 group ">
                   <Image
                     src={eachMember.image_url}
                     alt={`${
                       eachMember.first_name + " " + eachMember.last_name
                     }`}
                     fill
-                    className="bg-aloe object-cover object-top group-hover:scale-105 duration-200 group-hover:saturate-150"
+                    className="bg-aloe object-cover object-top group-hover:scale-105 duration-300 ease-out group-hover:saturate-150"
                   />
                 </div>
                 <div>
@@ -78,14 +78,14 @@ export default function Team() {
                 key={eachMember.id}
                 className="flex flex-col items-center gap-2 w-[min(85vw,350px)] "
               >
-                <div className="relative w-full aspect-square rounded-tl-[20px] rounded-br-[20px] shadow-[0px_2px_10px_0px_rgba(0,0,0,0.3),0px_5px_15px_0px_rgba(0,0,0,0.3)] overflow-hidden py-2 group">
+                <div className="relative w-full aspect-square rounded-tl-[20px] rounded-br-[20px] shadow-[0px_4px_15px_0px_rgba(0,0,0,0.4)] overflow-hidden py-2 group">
                   <Image
                     src={eachMember.image_url}
                     alt={`${
                       eachMember.first_name + " " + eachMember.last_name
                     }`}
                     fill
-                    className="object-cover bg-aloe object-top group-hover:scale-105 duration-200 group-hover:saturate-120"
+                    className="object-cover bg-aloe object-top group-hover:scale-105 duration-300 ease-out group-hover:saturate-150"
                   />
                 </div>
                 <div>
