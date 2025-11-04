@@ -33,7 +33,10 @@ export default function Blogs() {
     });
   };
   return (
-    <section className="flex flex-col gap-15 px-8 py-20 bg-gallery items-center">
+    <section
+      className="flex flex-col gap-15 px-8 py-20 bg-gallery items-center"
+      id="blogs"
+    >
       <div className="flex flex-col gap-3 text-center items-center">
         <h2 className="leading-[1.3] font-figtree font-bold text-main-heading text-aloe text-balance max-w-[20ch]">
           Insights, Stories, and{" "}
