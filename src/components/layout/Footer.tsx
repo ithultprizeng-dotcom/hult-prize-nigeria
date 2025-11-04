@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-4 items-center">
-            <Link href="https://www.instagram.com/hultprize.ng/">
+            <Link href="https://www.instagram.com/hultprize_ng?igsh=MmM4bjdia2cxaXB4">
               <Image
                 src={"/images/instagram.svg"}
                 alt="instagram"
