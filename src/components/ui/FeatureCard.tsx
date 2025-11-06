@@ -13,22 +13,22 @@ export default function FeatureCard({
   maskImagePath,
 }: FeatureCardProps) {
   return (
-    <div className="flex gap-24 items-center even:flex-row-reverse justify-center feature-card">
-      <div className="w-[40%]">
+    <div className="flex md:gap-24 gap-4 md:items-center flex-col-reverse md:flex-row md:even:flex-row-reverse justify-center feature-card">
+      <div className="md:w-[50%] lg:w-[40%]">
         <h3 className="font-figtree font-bold text-sub-heading text-aloe capitalize max-w-[30ch] text-balance leading-[1.2]">
           {feature_title}
         </h3>
         <p className="font-body font-bold text-body-lg text-pink capitalize">
           {feature_tagline}
         </p>
-        <p className="mt-6 font-body text-body text-[#909090] max-w-[45ch] leading-[1.5] tracking-[1px] text-balance">
+        <p className="mt-6 font-body text-body text-[#909090] md:max-w-[45ch] max-w-prose leading-[1.5] tracking-[1px] text-balance">
           {feature_content}
         </p>
       </div>
       <Image
         src={feature_image}
         alt={feature_title}
-        className="size-100 object-cover rounded-full"
+        className="size-60 sm:size-80 md:size-100 object-cover rounded-full"
         style={{
           maskImage: `url(${maskImagePath})`,
           maskSize: "cover",

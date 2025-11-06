@@ -4,7 +4,7 @@ import FeatureCard from "../ui/FeatureCard";
 
 export default function Features() {
   return (
-    <section className="px-8 py-20 min-h-dvh flex flex-col gap-12">
+    <section className="md:px-8 px-4 py-20 min-h-dvh flex flex-col gap-12">
       <div className="flex flex-col gap-2">
         <h2 className="font-figtree font-bold text-main-heading text-aloe">
           Why Hult Prize?
