@@ -3,7 +3,7 @@ import Image from "next/image";
 import { IMAGES } from "@/src/lib/constants";
 export default function HomePageAbout() {
   return (
-    <section className="min-h-screen bg-white relative px-8 py-20">
+    <section className="min-h-screen bg-white relative px-4 md:px-8 py-20">
       <div className="absolute inset-0 bg-[url('/images/green-background.png')] blur-[50px] contrast-125 saturate-150 brightness-120 bg-no-repeat bg-center">
         <div className="absolute size-60 bg-aloe blur-[60px] rounded-full saturate-150 brightness-125 bottom-12 right-12"></div>
       </div>
@@ -12,18 +12,18 @@ export default function HomePageAbout() {
           <span className="font-body">We Are</span>{" "}
           <span className="font-body">Hult Prize Nigeria</span>
         </h2>
-        <div className="flex justify-between w-full h-[600px] gap-8">
+        <div className="flex flex-col lg:flex-row justify-between w-full lg:h-[600px] gap-8">
           <Image
             src={IMAGES.image_thirteen}
             alt="young man making a presentaion standing in front of a screen"
-            className="w-[45%] h-full object-cover rounded-[12px]"
+            className="lg:w-[45%] w-[70%] object-contain lg:h-full lg:object-cover rounded-[12px]"
           />
-          <div className="grow h-full flex flex-col justify-between">
+          <div className="grow lg:h-full flex flex-col lg:justify-between gap-3 ">
             <div className="w-full flex justify-end">
               <Image
                 src={IMAGES.image_twelve}
                 alt="hult prize group photograph"
-                className="h-70 w-[40%] object-cover rounded-2xl"
+                className="lg:h-70 lg:w-[40%] w-[65%] object-cover lg:object-cover rounded-2xl"
               />
             </div>
             <div className="w-full flex flex-col gap-4 items-start">
