@@ -51,8 +51,26 @@ export default function Blog() {
       ></section>
     </main>
   ) : (
-    <div className="min-h-dvh text-black text-body-lg font-body font-bold py-20 px-8">
-      Fetching blog. Please wait...
-    </div>
+    <Skeleton />
+    // <div className="min-h-dvh text-black text-body-lg font-body font-bold py-20 px-8">
+    //   Fetching blog. Please wait...
+    // </div>
+  );
+}
+
+function Skeleton() {
+  return (
+    <section className="flex flex-col gap-6 items-center">
+      <div className="flex flex-col gap-1.5 w-full items-center">
+        <div className="w-full h-10 bg-text-white animate-ping"></div>
+        <div className="w-100 h-8 bg-text-white animate-ping"></div>
+      </div>
+
+      <div className="w-full h-6 bg-text-white animate-ping"></div>
+      <div className="w-full h-6 bg-text-white animate-ping"></div>
+      <div className="w-full h-6 bg-text-white animate-ping"></div>
+      <div className="w-full h-6 bg-text-white animate-ping"></div>
+      <div className="w-full h-6 bg-text-white animate-ping"></div>
+    </section>
   );
 }
