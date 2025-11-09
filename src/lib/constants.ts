@@ -34,6 +34,7 @@ export const NAVLINKS: NavlinksType[] = [
   // { href: "about-hult-prize", title: "about us" },
   { href: "/team", title: "our team" },
   { href: "/#blogs", title: "blogs" },
+  { href: "/donate", title: "donate" },
 ];
 
 export const IMAGES: { [key: string]: StaticImageData } = {
