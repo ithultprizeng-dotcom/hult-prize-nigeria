@@ -1,0 +1,16 @@
+.iframe {
+  width: 100%;
+  height: 700px;
+  max-width: 800px;
+  min-width: 400px !important;
+  border: none;
+  max-height: none !important;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 800px) {
+  .iframe {
+    min-width: 350px !important;
+  }
+}
