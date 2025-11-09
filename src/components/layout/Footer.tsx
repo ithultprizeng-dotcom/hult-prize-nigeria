@@ -43,8 +43,8 @@ export default function Footer() {
       </div>
 
       <div className="py-25 flex flex-col items-start gap-15 px-24">
-        <div className="flex justify-between items-end w-full">
-          <div className="flex flex-col gap-2.5">
+        <div className="grid grid-cols-3 gap-4 md:flex justify-between items-end w-full">
+          <div className="flex flex-col gap-4 col-span-3">
             <Image
               src={logo_nigeria}
               alt="hult prize nigerian logo"
@@ -55,7 +55,7 @@ export default function Footer() {
             </h5>
           </div>
 
-          <div className="flex-col gap-4 flex">
+          <div className="flex-col gap-4 flex col-span-3">
             {NAVLINKS.map((navlink, index) => (
               <Link
                 href={navlink.href}
@@ -67,14 +67,14 @@ export default function Footer() {
             ))}
           </div>
 
-          <div className="flex flex-col gap-4 items-center">
+          <div className="flex md:flex-col gap-4 items-center col-span-3">
             <Link href="https://www.instagram.com/hultprize_ng?igsh=MmM4bjdia2cxaXB4">
               <Image
                 src={"/images/instagram.svg"}
                 alt="instagram"
+                className="w-[25px]"
                 width={50}
                 height={50}
-                className="w-[25px]"
               />
             </Link>
             <Link href="https://x.com/hultprizenig">
