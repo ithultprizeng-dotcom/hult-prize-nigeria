@@ -21,7 +21,7 @@ export default function Testimonial() {
       <div className="flex flex-col gap-2.5">
         {/* top section */}
         <div className="h-100 w-[min(850px,85vw)] flex gap-2.5">
-          <div className="h-full grow relative overflow-clip rounded-[8px]">
+          <div className="h-full grow relative overflow-clip rounded-[8px] hidden md:flex">
             <Image
               src={image_three}
               alt="Dreamy Abstract Landscape"
@@ -42,7 +42,7 @@ export default function Testimonial() {
         </div>
         {/* bottom section */}
         <div className="h-100 w-[min(850px,85vw)] flex gap-2.5">
-          <div className="h-full w-1/2 bg-aloe rounded-[8px] relative flex flex-col gap-4 p-2 justify-center items-center">
+          <div className="h-full w-full md:w-1/2 bg-aloe rounded-[8px] relative flex flex-col gap-4 p-2 justify-center items-center">
             <p className="text-body-lg text-gallery font-body font-medium text-center">
               Hult Prize was by far one of the most amazing and fulfilling thing
               I ever had to do in my four years in University. It brought me the
@@ -64,7 +64,7 @@ export default function Testimonial() {
               </p>
             </div>
           </div>
-          <div className="h-full w-1/2 relative">
+          <div className="h-full w-1/2 relative hidden md:flex">
             <Image
               src={image_two}
               alt="Glowing flower"
