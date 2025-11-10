@@ -33,7 +33,7 @@ export const NAVLINKS: NavlinksType[] = [
   // { href: "hult-prize-winners", title: "winners + finalists" },
   // { href: "about-hult-prize", title: "about us" },
   { href: "/team", title: "our team" },
-  { href: "/#blogs", title: "blogs" },
+  { href: "/blogs", title: "blogs" },
   { href: "/donate", title: "donate" },
 ];
 
