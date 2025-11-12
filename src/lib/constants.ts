@@ -15,7 +15,7 @@ import image_thirteen from "../../public/images/image12.jpg";
 import image_fourteen from "../../public/images/image13.jpg";
 import image_fifteen from "../../public/images/image14.png";
 import image_sixteen from "../../public/images/image15.png";
-import institution_icon from "../../public/images/institution-icon.png";
+import institution_icon from "../../public/images/institution.png";
 import startup_icon from "../../public/images/startup-icon.png";
 import student_icon from "../../public/images/student-icon.png";
 import winner_icon from "../../public/images/winner-icon.png";
