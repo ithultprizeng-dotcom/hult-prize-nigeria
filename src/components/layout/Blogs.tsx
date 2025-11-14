@@ -52,28 +52,36 @@ export default function Blogs() {
       </div>
       <div className="relative">
         <button
-          className={cn(`cursor-pointer backdrop:blur-2xl block`, {
-            "cursor-not-allowed opacity-20": currentSlide === 0,
-          })}
+          className={cn(
+            `cursor-pointer backdrop:blur-2xl block absolute -left-4 sm:-left-10 top-[50%] z-30`,
+            {
+              "cursor-not-allowed opacity-20": currentSlide === 0,
+            }
+          )}
           onClick={leftButtonClick}
         >
           <CircleChevronLeft
             className={cn(
-              `h-15 w-15 text-aloe absolute -left-10 top-[50%] hover:text-pink duration-200`,
-              { "hover:text-red-800": currentSlide === 0 }
+              `h-15 w-15 text-pink sm:text-aloe  hover:text-aloe sm:hover:text-pink duration-200`,
+              {
+                "hover:text-red-800": currentSlide === 0,
+              }
             )}
           />
         </button>
         <button
-          className={cn(`cursor-pointer backdrop:blur-2xl block`, {
-            "cursor-not-allowed opacity-20":
-              numOfSlides && currentSlide === numOfSlides - 1,
-          })}
+          className={cn(
+            `cursor-pointer backdrop:blur-2xl block -right-4 sm:-right-10 top-[50%] absolute z-30 `,
+            {
+              "cursor-not-allowed opacity-20":
+                numOfSlides && currentSlide === numOfSlides - 1,
+            }
+          )}
           onClick={rightButtonClick}
         >
           <CircleChevronRight
             className={cn(
-              "h-15 w-15 text-aloe -right-10 top-[50%] absolute hover:text-pink duration-200",
+              "h-15 w-15 text-pink sm:text-aloe  hover:text-aloe sm:hover:text-pink duration-200",
               {
                 "hover:text-red-800":
                   numOfSlides && currentSlide === numOfSlides - 1,
@@ -81,9 +89,9 @@ export default function Blogs() {
             )}
           />
         </button>
-        <div className="px-15 py-5 flex justify-center overflow-clip">
+        <div className="px-2 md:px-15 py-5 flex justify-center overflow-clip">
           <div
-            className="flex gap-20 items-stretch w-[350px] translate-x-[-0%] duration-500 ease-out"
+            className="flex justify-start gap-20 items-stretch w-[min(350px,85vw)] translate-x-[-0%] duration-500 ease-out"
             style={{
               transform: `translateX(-${
                 currentSlide * slideTotalWidthPlusGap

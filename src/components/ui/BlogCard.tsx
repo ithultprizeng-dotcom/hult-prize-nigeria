@@ -11,8 +11,8 @@ export default function BlogCard({
 }: BlogCardType) {
   const router = useRouter();
   return (
-    <article className="flex flex-col gap-10 w-[350px]">
-      <div className="grid grid-cols-1 w-[350px] h-[350px]">
+    <article className="flex flex-col gap-10 w-[min(85vw,350px)] shrink-0">
+      <div className="grid grid-cols-1 w-full h-[350px]">
         <div className="article-image bg-aloe col-start-1 col-end-2 row-start-1 row-end-2 z-2 relative group overflow-clip">
           <Image
             src={imageSrc}
