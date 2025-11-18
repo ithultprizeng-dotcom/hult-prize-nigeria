@@ -1,4 +1,3 @@
-"use client";
 
 import { events } from "@/src/lib/constants";
 import EventCard from "../ui/EventCard";
