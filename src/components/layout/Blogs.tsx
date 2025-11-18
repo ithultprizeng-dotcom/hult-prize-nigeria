@@ -18,7 +18,7 @@ export default function Blogs() {
     getBlogPosts();
   }, []);
   const numOfSlides = blogData?.length;
-  const slideTotalWidthPlusGap = 123;
+  const slideTotalWidthPlusGap = 117;
   const rightButtonClick = () => {
     numOfSlides &&
       setCurrentSlide((prev) => {
@@ -91,7 +91,7 @@ export default function Blogs() {
         </button>
         <div className="px-2 md:px-15 py-5 flex justify-center overflow-clip">
           <div
-            className="flex justify-start gap-20 items-stretch w-[min(350px,85vw)] translate-x-[-0%] duration-500 ease-out"
+            className="flex justify-start gap-20 items-stretch w-[min(500px,85vw)] translate-x-[-0%] duration-500 ease-out"
             style={{
               transform: `translateX(-${
                 currentSlide * slideTotalWidthPlusGap
