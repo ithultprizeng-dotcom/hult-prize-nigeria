@@ -1,3 +1,5 @@
+import { type StaticImageData } from "next/image";
+
 export interface BlogAPIResponse {
   limit: number;
   page: number;
@@ -26,4 +28,17 @@ export interface TeamAPIResponse {
   role: string;
   role_type: string;
   image_url: string;
+}
+
+export interface EventCardType {
+  imageSrc: StaticImageData;
+  end_time: string;
+  start_time: string;
+  eventDate: string;
+  eventName: string;
+  description: string;
+  location: string;
+  calendarStartDate: string;
+  calendarStartTime: string;
+  calendarEndTime: string;
 }
