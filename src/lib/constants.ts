@@ -638,7 +638,7 @@ function checkForSpecialCharacters(eachLine: string): string {
   return textString;
 }
 
-export const events: EventCardType[] = [
+/*export const events: EventCardType[] = [
   {
     imageSrc: event_card_image_one,
     end_time: "6:30 p.m",
@@ -712,3 +712,5 @@ export const events: EventCardType[] = [
     calendarEndTime: "18:30",
   },
 ];
+
+*/
