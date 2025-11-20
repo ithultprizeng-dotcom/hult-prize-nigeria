@@ -44,7 +44,7 @@ export default function EventCard({
           className="w-20 absolute -right-7 -bottom-7"
         />
       </div>
-      <article className="grow bg-[#f1f1f1] group-hover:bg-[#e0e0e0] duration-300 rounded-2xl p-4 sm:px-8 flex flex-col justify-between gap-4 items-start">
+      <article className="grow bg-[#f1f1f1] group-hover:bg-[#e0e0e0] duration-300 rounded-2xl py-8 md:py-4 p-4 sm:px-8 flex flex-col justify-between gap-4 items-start">
         <div className="flex flex-col-reverse md:flex-row items-start md:items-center gap-2 md:gap-6 w-full">
           <div className="flex flex-col md:flex-row gap-3 md:gap-10 items-start md:items-center justify-start p-2.5 px-6 md:px-4 bg-white rounded-2xl md:rounded-full border border-aloe h-full">
             <div className="flex gap-1 items-center">
