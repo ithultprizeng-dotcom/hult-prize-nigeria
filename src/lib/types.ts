@@ -41,7 +41,8 @@ export interface EventsAPIResponseData {
   is_active: boolean;
   created_at: string;
   updated_at: string;
-  title: string;
+  theme: string;
+  description: string;
   event_type: EventType;
   event_status: string;
   image_url: string;
