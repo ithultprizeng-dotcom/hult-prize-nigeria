@@ -22,17 +22,20 @@ export default function EventCard({
   calendarStartDate,
   calendarStartTime,
   registrationLink,
-  eventType
+  eventType,
 }: EventCardType) {
   return (
-    <article className="flex items-stretch  gap-10 w-full pb-12 border-b-2 border-[#f1f1f1] group event-article">
-      <div className="relative w-[25%] aspect-square event-parent">
-        <div className="w-full h-full bg-aloe event-card relative rounded-bl-2xl overflow-hidden border-2 border-black child">
+    <article className="flex lg:flex-row flex-col lg:items-stretch items-center gap-8 lg:gap-6  w-full pb-12 border-b-2 border-[#f1f1f1] group event-article">
+      <div className="relative w-[min(100%,600px)] lg:w-[45%] xl:w-[25%] aspect-square">
+        <div
+          className="w-full h-full bg-[linear-gradient(-55deg,var(--aloe)_40%,var(--pink)_0%)]  event-card relative rounded-bl-2xl overflow-hidden border-2 border-black"
+          style={{ backgroundSize: "10% 5%" }}
+        >
           <Image
             src={imageSrc}
             alt="Event Image"
             fill
-            className="object-cover"
+            className="lg:object-cover object-contain w-full h-[90%]"
           />
         </div>
         <Image
@@ -41,15 +44,15 @@ export default function EventCard({
           className="w-20 absolute -right-7 -bottom-7"
         />
       </div>
-      <article className="grow bg-[#f1f1f1] group-hover:bg-[#e0e0e0] duration-300 rounded-2xl p-4 px-8 flex flex-col justify-between gap-4 items-start">
-        <div className="flex items-center gap-6">
-          <div className="flex gap-10 items-center p-2.5 px-4 bg-white rounded-full border border-aloe h-full">
+      <article className="grow bg-[#f1f1f1] group-hover:bg-[#e0e0e0] duration-300 rounded-2xl p-4 sm:px-8 flex flex-col justify-between gap-4 items-start">
+        <div className="flex flex-col-reverse md:flex-row items-start md:items-center gap-2 md:gap-6 w-full">
+          <div className="flex flex-col md:flex-row gap-3 md:gap-10 items-start md:items-center justify-start p-2.5 px-6 md:px-4 bg-white rounded-2xl md:rounded-full border border-aloe h-full">
             <div className="flex gap-1 items-center">
               <CalendarDays className="text-aloe" />
               <p className={paragraphStyleClasses}>{eventDate}</p>
             </div>
 
-            <div className="h-full w-[2px] rounded-full bg-[#c0c0c0]"></div>
+            <div className="md:h-full md:w-[2px] w-full h-[1px] rounded-full bg-aloe md:bg-[#c0c0c0]"></div>
             <div className="flex gap-1 items-center">
               <Clock8 className="text-aloe" />
               <p className={paragraphStyleClasses}>
@@ -72,7 +75,7 @@ export default function EventCard({
           <MapPin className="text-aloe mr-2" />
           <p className={paragraphStyleClasses}>{location}</p>
         </div>
-        <div className="flex gap-2 items-center">
+        <div className="flex md:flex-row flex-col gap-2 items-center">
           <AddToCalendarButton
             name={eventName}
             options={[
