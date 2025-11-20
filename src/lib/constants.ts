@@ -20,6 +20,12 @@ import startup_icon from "../../public/images/startup-icon.png";
 import student_icon from "../../public/images/student-icon.png";
 import winner_icon from "../../public/images/winner-icon.png";
 import { type StaticImageData } from "next/image";
+import { EventCardType } from "./types";
+import event_card_image_one from "../../public/images/cashflow.webp";
+import event_card_image_two from "../../public/images/epicenter.webp";
+import event_card_image_three from "../../public/images/hero.jpg";
+import event_card_image_four from "../../public/images/mentor.jpg";
+import event_card_image_five from "../../public/images/pillars.webp";
 
 export interface NavlinksType {
   href: string;
@@ -631,3 +637,80 @@ function checkForSpecialCharacters(eachLine: string): string {
   }
   return textString;
 }
+
+/*export const events: EventCardType[] = [
+  {
+    imageSrc: event_card_image_one,
+    end_time: "6:30 p.m",
+    start_time: "4:00 p.m",
+    eventDate: "21 November, 2025",
+    eventName:
+      "Bulding a well structured community in the Nigerian tech ecosystem",
+    description:
+      "Cupidatat velit magna mollit voluptate. Amet id excepteur mollit ut deserunt qui velit fugiat labore aliqua est dolor.",
+    location: "Badagry Lagos, online participants can join from Google Meet",
+    calendarStartDate: "2025-11-21",
+    calendarStartTime: "16:00",
+    calendarEndTime: "18:30",
+  },
+  {
+    imageSrc: event_card_image_two,
+    end_time: "6:30 p.m",
+    start_time: "4:00 p.m",
+    eventDate: "23 November, 2025",
+    eventName:
+      "Adjusting to the waves of change brought about by the widespread adoption of A.I. solutions and workflows",
+    description:
+      "Cupidatat velit magna mollit voluptate. Amet id excepteur mollit ut deserunt qui velit fugiat labore aliqua est dolor.",
+    location: "Badagry Lagos, online participants can join from Google Meet",
+
+    calendarStartDate: "2025-11-23",
+    calendarStartTime: "16:00",
+    calendarEndTime: "18:30",
+  },
+  {
+    imageSrc: event_card_image_three,
+    end_time: "6:30 p.m",
+    start_time: "4:00 p.m",
+    eventDate: "26 November, 2025",
+    eventName:
+      "How to build and maintain a niche in the fast evolving global tech space",
+    description:
+      "Cupidatat velit magna mollit voluptate. Amet id excepteur mollit ut deserunt qui velit fugiat labore aliqua est dolor.",
+    location: "Badagry Lagos, online participants can join from Google Meet",
+
+    calendarStartDate: "2025-11-26",
+    calendarStartTime: "16:00",
+    calendarEndTime: "18:30",
+  },
+  {
+    imageSrc: event_card_image_four,
+    end_time: "6:30 p.m",
+    start_time: "4:00 p.m",
+    eventDate: "29th November, 2025",
+    eventName:
+      "Catch Them Young: Making Technology and Information Technology an integral part of the Nigerian school system curriculum",
+    description:
+      "Cupidatat velit magna mollit voluptate. Amet id excepteur mollit ut deserunt qui velit fugiat labore aliqua est dolor.",
+    location: "Badagry Lagos, online participants can join from Google Meet",
+
+    calendarStartDate: "2025-11-29",
+    calendarStartTime: "16:00",
+    calendarEndTime: "18:30",
+  },
+  {
+    imageSrc: event_card_image_five,
+    end_time: "6:30 p.m",
+    start_time: "4:00 p.m",
+    eventDate: "5th December, 2025",
+    eventName: "Fostering a collaborative culture with the Nigerian Tech Space",
+    description:
+      "Cupidatat velit magna mollit voluptate. Amet id excepteur mollit ut deserunt qui velit fugiat labore aliqua est dolor.",
+    location: "Badagry Lagos, online participants can join from Google Meet",
+    calendarStartDate: "2025-12-05",
+    calendarStartTime: "16:00",
+    calendarEndTime: "18:30",
+  },
+];
+
+*/

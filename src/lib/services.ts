@@ -1,4 +1,10 @@
-import { BlogAPIResponse, BlogAPIResponseData, TeamAPIResponse } from "./types";
+import {
+  BlogAPIResponse,
+  BlogAPIResponseData,
+  EventsAPIResponse,
+  EventsAPIResponseData,
+  TeamAPIResponse,
+} from "./types";
 
 const BASEURL = process.env.NEXT_PUBLIC_API_BASEURL;
 
@@ -36,6 +42,15 @@ export async function fetchExecutiveTeam(): Promise<TeamAPIResponse[]> {
   );
   console.log("The EXECUTIVE TEAM: ", response);
   return response;
+}
+
+export async function fetchUpcomingEvents(): Promise<EventsAPIResponseData[]> {
+  const response: EventsAPIResponse = await fetchData(
+    "/event?status=UPCOMING",
+    "Sorry, we cannot fetch the Upcoming Events at this time. Please try again"
+  );
+  console.log("UPCOMING EVENTS", response.data);
+  return response.data;
 }
 
 async function fetchData(endPoint: string, errorMessage: string) {

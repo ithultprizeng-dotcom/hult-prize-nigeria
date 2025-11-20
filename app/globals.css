@@ -65,6 +65,11 @@
     background-color: var(--midnight);
   }
 }
+.button.hov-aloe {
+  &:hover {
+    background-color: var(--aloe);
+  }
+}
 
 .button.hov-pink {
   &:hover {
@@ -239,4 +244,66 @@
 
 .blog-content ul {
   list-style: square;
+}
+
+.event-card {
+  clip-path: polygon(
+    0 0,
+    5% 5%,
+    10% 0%,
+    15% 5%,
+    20% 0,
+    25% 5%,
+    30% 0%,
+    35% 5%,
+    40% 0,
+    45% 5%,
+    50% 0%,
+    55% 5%,
+    60% 0,
+    65% 5%,
+    70% 0%,
+    75% 5%,
+    80% 0,
+    85% 5%,
+    90% 0%,
+    95% 5%,
+    100% 0,
+    100% 100%,
+    0% 100%,
+    0% 0%
+  );
+  transition: clip-path 300ms ease-in;
+
+}
+
+.event-article {
+  &:hover .event-card {
+    clip-path: polygon(
+      0 5%,
+      5% 0%,
+      10% 5%,
+      15% 0%,
+      20% 5%,
+      25% 0%,
+      30% 5%,
+      35% 0%,
+      40% 5%,
+      45% 0%,
+      50% 5%,
+      55% 0%,
+      60% 5%,
+      65% 0%,
+      70% 5%,
+      75% 0%,
+      80% 5%,
+      85% 0%,
+      90% 5%,
+      95% 0%,
+      100% 5%,
+      100% 100%,
+      0% 100%,
+      0% 0%
+    );
+  }
 }

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
+    "add-to-calendar-button-react": "^2.13.2",
     "clsx": "^2.1.1",
     "heroicons": "^2.2.0",
     "lucide-react": "^0.548.0",
