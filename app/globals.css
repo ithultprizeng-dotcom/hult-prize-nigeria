@@ -46,6 +46,11 @@
   scroll-behavior: smooth;
 }
 
+::selection {
+  background-color: var(--aloe);
+  color: white
+}
+
 .button {
   clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
   transition: all 200ms ease-out;
@@ -274,7 +279,6 @@
     0% 0%
   );
   transition: clip-path 300ms ease-in;
-
 }
 
 .event-article {
