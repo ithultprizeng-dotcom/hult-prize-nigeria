@@ -45,22 +45,15 @@ export function EventCardsBlock() {
                 }
                 start_time={
                   processDateAndTime(
-                    eachEvent.event_date + ":" + eachEvent.end_time
+                    eachEvent.event_date + ":" + eachEvent.start_time
                   ).processedTime
                 }
                 eventDate={
                   processDateAndTime(eachEvent.event_date).processedDate
                 }
-                eventName={eachEvent.title}
-                description={`${eachEvent.title} promises to be a value packed event as every Hult Prize event turns out to be. Lots of value will be shared and you cannot afford to miss out!`}
-                location={
-                  eachEvent.event_address
-                    ? eachEvent.event_type === "HYBRID"
-                      ? eachEvent.event_address +
-                        "and Online Participation with Google Meet"
-                      : eachEvent.event_address
-                    : "Online Event with Google Meet"
-                }
+                eventName={eachEvent.theme}
+                description={eachEvent.description}
+                location={eachEvent.event_address}
                 calendarEndTime={eachEvent.end_time}
                 calendarStartDate={eachEvent.event_date}
                 calendarStartTime={eachEvent.start_time}
