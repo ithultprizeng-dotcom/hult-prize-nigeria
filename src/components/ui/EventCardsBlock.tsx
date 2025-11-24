@@ -3,6 +3,7 @@ import { EventCardType, EventsAPIResponseData } from "@/src/lib/types";
 import EventCard from "./EventCard";
 import { useState, useEffect } from "react";
 import { fetchUpcomingEvents } from "@/src/lib/services";
+import NoAvailableEvent from "./NoAvailableEvent";
 
 const processDateAndTime = (dateString: string) => {
   const date = new Date(dateString);
@@ -29,40 +30,38 @@ export function EventCardsBlock() {
     fetchEvents();
     setMount(true);
   }, []);
-  return (
-    eventsData && (
-      <section className="flex flex-col gap-12 ">
-        {eventsData.map(
-          (eachEvent, index) =>
-            hasMounted && (
-              <EventCard
-                key={index}
-                imageSrc={eachEvent.image_url}
-                end_time={
-                  processDateAndTime(
-                    eachEvent.event_date + ":" + eachEvent.end_time
-                  ).processedTime
-                }
-                start_time={
-                  processDateAndTime(
-                    eachEvent.event_date + ":" + eachEvent.start_time
-                  ).processedTime
-                }
-                eventDate={
-                  processDateAndTime(eachEvent.event_date).processedDate
-                }
-                eventName={eachEvent.theme}
-                description={eachEvent.description}
-                location={eachEvent.event_address}
-                calendarEndTime={eachEvent.end_time}
-                calendarStartDate={eachEvent.event_date}
-                calendarStartTime={eachEvent.start_time}
-                registrationLink={eachEvent.register_link}
-                eventType={eachEvent.event_type}
-              />
-            )
-        )}
-      </section>
-    )
+  return eventsData && eventsData.length !== 0 ? (
+    <section className="flex flex-col gap-12 ">
+      {eventsData.map(
+        (eachEvent, index) =>
+          hasMounted && (
+            <EventCard
+              key={index}
+              imageSrc={eachEvent.image_url}
+              end_time={
+                processDateAndTime(
+                  eachEvent.event_date + ":" + eachEvent.end_time
+                ).processedTime
+              }
+              start_time={
+                processDateAndTime(
+                  eachEvent.event_date + ":" + eachEvent.start_time
+                ).processedTime
+              }
+              eventDate={processDateAndTime(eachEvent.event_date).processedDate}
+              eventName={eachEvent.theme}
+              description={eachEvent.description}
+              location={eachEvent.event_address}
+              calendarEndTime={eachEvent.end_time}
+              calendarStartDate={eachEvent.event_date}
+              calendarStartTime={eachEvent.start_time}
+              registrationLink={eachEvent.register_link}
+              eventType={eachEvent.event_type}
+            />
+          )
+      )}
+    </section>
+  ) : (
+    <NoAvailableEvent />
   );
 }
