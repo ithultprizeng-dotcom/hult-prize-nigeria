@@ -44,6 +44,15 @@ export async function fetchExecutiveTeam(): Promise<TeamAPIResponse[]> {
   return response;
 }
 
+export async function fetchCampusDirectorTeam(): Promise<TeamAPIResponse[]> {
+  const response: TeamAPIResponse[] = await fetchData(
+    "/team?role_type=CD",
+    "Sorry we could not fetch the Campus Director team at this time"
+  );
+  console.log("The CAMPUS DIRECTOR TEAM: ", response);
+  return response;
+}
+
 export async function fetchUpcomingEvents(): Promise<EventsAPIResponseData[]> {
   const response: EventsAPIResponse = await fetchData(
     "/event?status=UPCOMING",
