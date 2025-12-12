@@ -61,7 +61,6 @@ export default function Hero() {
         .from(
           ".image-clip",
           {
-            x: -40,
             opacity: 0,
             ease: "power3.out",
             duration: 0.8,
