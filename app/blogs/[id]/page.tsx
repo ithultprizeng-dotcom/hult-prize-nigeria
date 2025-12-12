@@ -11,7 +11,6 @@ export default function Blog() {
   const sectionRef = useRef<HTMLElement>(null);
   const [blogPost, setBlogPost] = useState<BlogAPIResponseData | null>(null);
   const [html, sethtml] = useState("");
-
   useEffect(() => {
     async function getSingleBlogPost() {
       if (!id) return;
@@ -30,7 +29,7 @@ export default function Blog() {
       sethtml(cleanedBlogContent);
     }
     getSingleBlogPost();
-  }, [blogPost]);
+  }, []);
 
   return blogPost ? (
     <main className="flex flex-col gap-10 px-12 py-20">
@@ -59,18 +58,10 @@ export default function Blog() {
 }
 
 function Skeleton() {
-  return (
-    <section className="flex flex-col gap-6 items-center">
-      <div className="flex flex-col gap-1.5 w-full items-center">
-        <div className="w-full h-10 bg-text-white animate-ping"></div>
-        <div className="w-100 h-8 bg-text-white animate-ping"></div>
-      </div>
-
-      <div className="w-full h-6 bg-text-white animate-ping"></div>
-      <div className="w-full h-6 bg-text-white animate-ping"></div>
-      <div className="w-full h-6 bg-text-white animate-ping"></div>
-      <div className="w-full h-6 bg-text-white animate-ping"></div>
-      <div className="w-full h-6 bg-text-white animate-ping"></div>
-    </section>
-  );
+  return <section className="flex flex-col gap-6 items-center">
+    <div>
+      <div> </div>
+      <div></div>
+    </div>
+  </section>;
 }
