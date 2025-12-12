@@ -1,26 +1,105 @@
-import Image from "next/image";
+"use client";
 import list_orb from "@/public/images/orb.png";
 import { ParticipantsList } from "./participantsList";
 import { eligibleParticipants, irrelevant_things } from "../constants";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
+
+gsap.registerPlugin(useGSAP, SplitText, ScrollTrigger);
 export default function Participants() {
+  const container = useRef(null);
+  useGSAP(
+    () => {
+      const split1 = SplitText.create(".participant-heading", {
+        type: "words",
+        mask: "words",
+      });
+      const split2 = SplitText.create(".participant-subText", {
+        type: "lines",
+        mask: "lines",
+      });
+      const split3 = SplitText.create(".split-3", {
+        type: "words",
+        mask: "words",
+      });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".trigger-one",
+          start: "top center",
+          end: "+=200",
+          scrub: true,
+        },
+      });
+      tl.from(split1.words, {
+        yPercent: 120,
+        stagger: 0.1,
+        ease: "power2.out",
+      }).from(split2.lines, {
+        yPercent: 120,
+        stagger: 0.2,
+        ease: "power4.out",
+      });
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".trigger-two",
+          start: "bottom bottom",
+          end: "+=300",
+          scrub: true,
+        },
+      });
+      tl2.to(".trigger-two li", {
+        opacity: 1,
+        x: 0,
+        transformOrigin: "left",
+        stagger: 0.2,
+        ease: "power3.out",
+      });
+      const tl3 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".trigger-three",
+          start: "bottom bottom",
+          end: "+=300",
+          scrub: true,
+        },
+      });
+      tl3
+        .from(split3.words, {
+          filter: "blur(4px)",
+          opacity: 0,
+          stagger: 0.1,
+          ease: "power2.inOut",
+        })
+        .to(".trigger-three li", {
+          opacity: 1,
+          x: 0,
+          transformOrigin: "left",
+          stagger: 0.2,
+          ease: "power3.out",
+        });
+    },
+    { scope: container }
+  );
   return (
-    <section className="flex flex-col gap-12 pb-25">
-      <div className="flex flex-col gap-1">
-        <h2 className="font-figtree font-bold text-[#404090] tracking-[1.1px] leading-[1] text-sub-heading capitalize">
+    <section ref={container} className="flex flex-col gap-12 py-25">
+      <div className="flex flex-col gap-1 trigger-one">
+        <h2 className="font-figtree font-bold text-[#404090] tracking-[1.1px] leading-[1] text-sub-heading capitalize participant-heading">
           Who can participate?
         </h2>
-        <p className="font-body text-[#808080] leading-[1.5] max-w-[45ch] text-balance">
-          The Hult Prize journey begins right on your campus too. Hult Prize is
-          open to:
+        <p className="font-body text-[#808080] leading-[1.5] max-w-[45ch] text-balance participant-subText">
+          The Hult Prize journey begins right on your campus. Hult Prize is open
+          to:
         </p>
       </div>
-      <section className="flex gap-8 flex-wrap justify-stretch items-stretch">
+      <section className="flex gap-8 flex-wrap justify-stretch items-stretch trigger-two ">
         {eligibleParticipants.map((each, index) => (
           <ParticipantsList text={each} key={index} imageSrc={list_orb} />
         ))}
       </section>
-      <div className="flex flex-col mt-10 gap-8">
-        <h2 className="font-figtree font-bold text-[#404090] tracking-[1.1px] leading-[1] text-3xl capitalize">
+      <div className="flex flex-col mt-10 gap-8 trigger-three">
+        <h2 className="font-figtree font-bold text-[#404090] tracking-[1.1px] leading-[1] text-3xl capitalize split-3">
           You do not need to have:
         </h2>
 
