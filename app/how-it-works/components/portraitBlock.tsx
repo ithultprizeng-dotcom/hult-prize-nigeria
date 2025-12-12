@@ -12,7 +12,7 @@ export function PortraitBlock({
   imgSrc,
 }: HultPrizeBenefitsType) {
   return (
-    <section className="flex flex-col p-4 py-6 gap-6 h-full">
+    <section className="flex flex-col p-4 py-6 gap-6 h-full w-full">
       <div className="flex justify-between items-start gap-1">
         <TagLabel text={tag} />
         {svg}

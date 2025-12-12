@@ -4,7 +4,7 @@ import { SquareLayout } from "./squareLayout";
 import { LandscapeLayout } from "./landscapeLayout";
 export function BenefitsGrid() {
   return (
-    <section className="grid grid-cols-3 grid-rows-[repeat(3,minmax(300px,auto))] *:bg-[#f0f0f0] gap-2.5 *:rounded-2xl *:hover:bg-[#ec208833] *:even:hover:bg-[#06b47a40] *:duration-300">
+    <section className="flex flex-wrap gap-6 lg:grid grid-cols-3 grid-rows-[repeat(3,minmax(300px,auto))] *:bg-[#f0f0f0] lg:gap-2.5 *:rounded-2xl *:hover:bg-[#ec208833] *:even:hover:bg-[#06b47a40] *:duration-300 *:mb-6 *:w-full">
       {hultPrizeNigeriaBenefits.map(
         (
           { block, tag, textContent, subHeading, title, imgSrc, svg },

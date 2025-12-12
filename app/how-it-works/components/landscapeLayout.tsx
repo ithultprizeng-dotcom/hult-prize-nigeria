@@ -12,13 +12,13 @@ export function LandscapeLayout({
   imgSrc,
 }: HultPrizeBenefitsType) {
   return (
-    <section className="flex p-6 gap-8 justify-center w-full h-full">
+    <section className="flex flex-col lg:flex-row p-6 gap-8 justify-center w-full h-full ">
       {imgSrc && (
         <Image
           src={imgSrc}
           alt="grid image"
           aria-hidden="true"
-          className="w-[45%] h-full shadow-[0_6px_12px_rgba(0,0,0,0.4)] object-cover rounded-2xl flex-1 border-2"
+          className="w-full lg:w-[45%] h-full shadow-[0_6px_12px_rgba(0,0,0,0.4)] object-contain lg:object-cover rounded-2xl flex-1 border-2"
         />
       )}
 

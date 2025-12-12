@@ -10,7 +10,7 @@ export function SquareLayout({
   tag,
 }: HultPrizeBenefitsType) {
   return (
-    <section className="flex flex-col p-4 gap-4">
+    <section className="flex flex-col p-4 gap-4 w-full">
       <div className="flex w-full justify-between items-center">
         <TagLabel text={tag} />
         {svg}
