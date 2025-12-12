@@ -17,7 +17,7 @@ export default function Challenge() {
           UN Sustainable Development Goals (SDGs).
         </p>
       </div>
-      <div className="flex flex-col-reverse mt-10 gap-8 -translate-y-30">
+      <div className="flex flex-col-reverse mt-10 gap-8 md:-translate-y-30">
         <div className="flex flex-col ">
           <h4 className="font-body font-bold text-aloe text-body-lg ">
             Triple Bottom Line
@@ -34,7 +34,7 @@ export default function Challenge() {
           aria-hidden="true"
           className="w-70 object-contain mx-auto"
         />
-        <div className="flex flex-col items-end text-right ml-auto translate-y-30">
+        <div className="flex flex-col items-end text-right ml-auto md:translate-y-30">
           <h4 className="font-body font-bold text-aloe text-body-lg">
             Nigerian Relevance 
           </h4>
