@@ -36,7 +36,6 @@ export function JudgingCriteria() {
           start: "top 90%",
           end: "top 5%",
           scrub: true,
-          markers: true,
         },
       });
       tl.from(split.chars, {
