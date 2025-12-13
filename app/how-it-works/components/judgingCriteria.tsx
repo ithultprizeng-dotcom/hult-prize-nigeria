@@ -15,19 +15,19 @@ export function JudgingCriteria() {
   useGSAP(
     () => {
       const split = SplitText.create(".block-left .criteria-heading", {
-        type: "chars",
+        type: "chars, words",
         mask: "chars",
       });
       const splitSub = SplitText.create(".block-left .criteria-subtext", {
-        type: "chars",
+        type: "words",
         mask: "chars",
       });
       const split1 = SplitText.create(".block-right .criteria-heading", {
-        type: "chars",
+        type: " words",
         mask: "chars",
       });
       const splitSub1 = SplitText.create(".block-right .criteria-subtext", {
-        type: "chars",
+        type: "chars, words",
         mask: "chars",
       });
       const tl = gsap.timeline({
@@ -38,12 +38,12 @@ export function JudgingCriteria() {
           scrub: true,
         },
       });
-      tl.from(split.chars, {
+      tl.from(split.words, {
         yPercent: -150,
         stagger: 0.3,
       })
         .from(
-          split1.chars,
+          split1.words,
           {
             yPercent: 150,
             stagger: 0.3,
