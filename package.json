@@ -12,6 +12,7 @@
     "@headlessui/react": "^2.2.9",
     "add-to-calendar-button-react": "^2.13.2",
     "clsx": "^2.1.1",
+    "gsap": "^3.14.2",
     "heroicons": "^2.2.0",
     "lucide-react": "^0.548.0",
     "next": "^15.5.9",
