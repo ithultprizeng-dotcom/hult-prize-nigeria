@@ -74,12 +74,12 @@ export default function CompetitionJourney() {
             scale: 0,
             y: -100,
           })
-          .from(`.timeline-block:nth-child(${index + 1}) .timeline-line`, {
-            opacity: 0,
-            scaleY: 0,
-            transformOrigin: "top",
-            y: -100,
-          })
+          // .from(`.timeline-block:nth-child(${index + 1}) .timeline-line`, {
+          //   opacity: 0,
+          //   scaleY: 0,
+          //   transformOrigin: "top",
+          //   y: -100,
+          // })
           .from(`.timeline-block:nth-child(${index + 1}) h3`, {
             y: 100,
             opacity: 0,
@@ -96,6 +96,18 @@ export default function CompetitionJourney() {
             "<1"
           );
         //
+        const tlLine = gsap.timeline({
+          scrollTrigger: {
+            trigger: `.timeline-block:nth-child(${index + 1}) .timeline-line`,
+            start: "top 40%",
+            end: "+=550",
+            scrub: true,
+          },
+        });
+        tlLine.from(`.timeline-block:nth-child(${index + 1}) .timeline-line`, {
+          scaleY: 0,
+          transformOrigin: "top",
+        });
         competitionListArray.forEach((_, listIndex) => {
           const split2 = SplitText.create(
             `.timeline-block:nth-child(${
