@@ -160,7 +160,7 @@ export default function CompetitionJourney() {
         />
       </div>
 
-      <h2 className="font-figtree font-bold text-hero uppercase text-[#404090] tracking-[1px] journey-major">
+      <h2 className="font-figtree font-bold text-hero uppercase text-[#404090] tracking-[1px] journey-major idea-main-text">
         The Journey Timeline
       </h2>
       <section className="flex flex-col gap-4">
