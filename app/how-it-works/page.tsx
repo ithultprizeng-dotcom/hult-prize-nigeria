@@ -8,7 +8,7 @@ import Participants from "./components/participants";
 
 export default function HowItWorks() {
   return (
-    <main className="min-h-screen px-6 py-8">
+    <main className="min-h-screen px-6 py-8 overflow-x-hidden">
       <Hero />
       <Challenge />
       <Participants />
