@@ -15,11 +15,11 @@ export function CallToAction() {
   useGSAP(
     () => {
       const split = SplitText.create(".cta-heading", {
-        type: "chars",
+        type: "chars,words",
         mask: "chars",
       });
       const splitSub = SplitText.create(".cta-subtext", {
-        type: "chars",
+        type: "chars, words",
         mask: "chars",
       });
       const tl = gsap.timeline({
