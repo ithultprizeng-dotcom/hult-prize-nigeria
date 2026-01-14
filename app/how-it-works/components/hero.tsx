@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { useRef } from "react";
 import { SplitText } from "gsap/SplitText";
+// import { SplitText } from "gsap/all";
 
 gsap.registerPlugin(useGSAP, SplitText);
 export default function Hero() {
@@ -12,11 +13,12 @@ export default function Hero() {
   useGSAP(
     () => {
       const split = SplitText.create(".head_text", {
-        type: "words",
-        mask: "words",
+        type: "words, chars",
+        mask: "chars",
       });
       const split2 = SplitText.create(".split-2", {
         type: "words",
+        mask: "words",
       });
       const split3 = SplitText.create(".split-3", {
         type: "lines",
@@ -35,18 +37,17 @@ export default function Hero() {
         ],
         { autoAlpha: 1 }
       );
-      tl.from(split.words, {
+      tl.from(split.chars, {
         yPercent: 120,
-        scale: 0.7,
-        stagger: 0.1,
+        stagger: 0.01,
+        ease: "power3.out",
       })
         .from(
           split2.words,
           {
-            opacity: 0,
-            x: 20,
+            yPercent: 120,
             stagger: 0.1,
-            ease: "back.out(5)",
+            ease: "elastic.out(1, 0.5)",
           },
           "<0.2"
         )
@@ -54,9 +55,10 @@ export default function Hero() {
           split3.lines,
           {
             yPercent: 110,
-            stagger: 0.1,
+            stagger: 0.05,
+            ease: "power3.out",
           },
-          "<0.2"
+          "<0.5"
         )
         .from(
           ".image-clip",
