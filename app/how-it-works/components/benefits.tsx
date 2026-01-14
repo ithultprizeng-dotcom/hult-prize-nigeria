@@ -25,13 +25,11 @@ export default function Benefits() {
           end: "+=100",
           toggleActions: "play none none reverse",
         },
-        defaults: { ease: "power3.out" },
+        defaults: { ease: "power3.out", yPercent: 120 },
       });
       tl.from(split.chars, {
-        yPercent: 120,
         stagger: { each: 0.05, from: "center" },
-        ease: "power3.out",
-    }).from(split1.words, { yPercent: -120, stagger: {each: 0.07, from: 'end'} }, '<0.2');
+      }).from(split1.words, { stagger: { each: 0.07, from: "edges" } }, "<0.2");
     },
     { scope: container }
   );

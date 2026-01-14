@@ -27,31 +27,28 @@ export function CallToAction() {
           trigger: ".cta-text-block",
           start: "top center",
           end: "+=100",
-          scrub: 1,
+          toggleActions: "play none none reverse",
         },
       });
-      tl.from(split.chars, { yPercent: 150, stagger: 0.2 }).from(
+      tl.from(split.chars, { yPercent: 150, stagger: 0.02 }).from(
         splitSub.chars,
-        { xPercent: 120, stagger: 0.2, ease: "bounce.out(3)" }
+        { xPercent: 120, stagger: 0.02, ease: "bounce.out(3)" },
+        "<0.3"
       );
       const tl2 = gsap.timeline({
         scrollTrigger: {
           trigger: ".list-hold",
           start: "top 65%",
           end: "+=200",
-          scrub: true,
+          toggleActions: "play none none reverse",
         },
       });
       tl2
-        .to(
-          ".list-hold li",
-          {
-            opacity: 1,
-            x: 0,
-            stagger: 0.2,
-            ease: "power3.out",
-          }
-        )
+        .to(".list-hold li", {
+          opacity: 1,
+          stagger: 0.1,
+          ease: "power3.out",
+        })
         .fromTo(
           ".btn-hold",
           { opacity: 0, y: 70 },

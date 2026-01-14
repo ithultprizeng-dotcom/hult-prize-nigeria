@@ -16,15 +16,15 @@ export function JudgingCriteria() {
     () => {
       const split = SplitText.create(".block-left .criteria-heading", {
         type: "chars, words",
-        mask: "chars",
+        mask: "words",
       });
       const splitSub = SplitText.create(".block-left .criteria-subtext", {
-        type: "words",
+        type: "words, chars",
         mask: "chars",
       });
       const split1 = SplitText.create(".block-right .criteria-heading", {
-        type: " words",
-        mask: "chars",
+        type: "chars, words",
+        mask: "words",
       });
       const splitSub1 = SplitText.create(".block-right .criteria-subtext", {
         type: "chars, words",
@@ -33,44 +33,52 @@ export function JudgingCriteria() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".criteria-block",
-          start: "top 90%",
-          end: "top 5%",
-          scrub: true,
+          start: "top 65%",
+          end: "bottom center",
+          toggleActions: "play none none reverse",
         },
       });
       tl.from(split.words, {
         yPercent: -150,
-        stagger: 0.3,
+        stagger: 0.08,
+        ease: "power4.out",
       })
         .from(
           split1.words,
           {
             yPercent: 150,
-            stagger: 0.3,
+            stagger: 0.08,
+            ease: "power4.out",
           },
           "<"
         )
         .fromTo(
           splitSub.chars,
           { opacity: 0 },
-          { opacity: 1, stagger: { each: 0.3, from: "end" } },
-          "<0.3"
+          { opacity: 1, stagger: { each: 0.01, from: "end" } }, '<0.3'
         )
         .fromTo(
           splitSub1.chars,
           { opacity: 0 },
-          { opacity: 1, stagger: { each: 0.3, from: "end" } },
-          "<0.3"
+          { opacity: 1, stagger: { each: 0.01, from: "end" } },
+          "<"
         )
         .from(".criteria-item", {
           x: -200,
-          stagger: 0.3,
+          stagger: 0.1,
           opacity: 0,
-          ease: "bounce.out(3)",
+          ease: "power3.in",
+          duration: 0.8,
         })
         .from(
           ".criteria-item-right",
-          { x: 200, stagger: 0.3, opacity: 0, ease: "bounce.out(3)" },
+          {
+            x: 200,
+            stagger: 0.1,
+            opacity: 0,
+            ease: "power3.in",
+            duration: 0.8,
+          },
           "<"
         );
     },
