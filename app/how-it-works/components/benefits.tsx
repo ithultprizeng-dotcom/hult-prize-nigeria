@@ -23,14 +23,15 @@ export default function Benefits() {
           trigger: ".benefits-main-text-block",
           start: "top center",
           end: "+=100",
-          scrub: true,
+          toggleActions: "play none none reverse",
         },
+        defaults: { ease: "power3.out" },
       });
       tl.from(split.chars, {
         yPercent: 120,
-        stagger: { each: 0.2, from: "center" },
+        stagger: { each: 0.05, from: "center" },
         ease: "power3.out",
-      }).from(split1.words, { yPercent: -120, stagger: 0.3, ease: "back(2)" });
+    }).from(split1.words, { yPercent: -120, stagger: {each: 0.07, from: 'end'} }, '<0.2');
     },
     { scope: container }
   );

@@ -18,7 +18,7 @@ export function GridCardContent({
   const container = useRef(null);
   useGSAP(
     () => {
-      const split = SplitText.create(".content-holder h3", { type: "words" });
+      const split = SplitText.create(".content-holder h3", { type: "chars, words" });
       const split1 = SplitText.create(".content-holder p", {
         type: "lines",
         mask: "lines",
@@ -28,14 +28,18 @@ export function GridCardContent({
           trigger: ".content-holder",
           start: "top center",
           end: "+=200",
-          scrub: 1,
+          toggleActions: 'play none none reverse'
         },
       });
-      tl.from(split.words, {
+      tl.from(split.chars, {
         opacity: 0,
         filter: "blur(5px)",
-        stagger: 0.2,
-      }).from(split1.lines, { yPercent: 120 });
+        stagger: 0.007,
+      }).from(
+        split1.lines,
+        { yPercent: 120, stagger: { each: 0.05, from: "end" } },
+        "<0.2"
+      );
     },
     { scope: container }
   );

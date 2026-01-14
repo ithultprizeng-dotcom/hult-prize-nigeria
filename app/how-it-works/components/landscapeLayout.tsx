@@ -33,31 +33,31 @@ export function LandscapeLayout({
           trigger: ".landscape-block",
           start: "top center",
           end: "+=200",
-          scrub: 1,
+          toggleActions: "play none none reverse",
         },
-        ease: "power4.out",
+        defaults: { ease: "power4.out" },
       });
       tl.fromTo(".landscape-block", { opacity: 0, y: 50 }, { opacity: 1, y: 0 })
 
         .to(".tag-label", { autoAlpha: 1 })
         .to(split.chars, {
           yPercent: 0,
-          stagger: { each: 0.1, from: "end" },
+          stagger: { each: 0.008, from: "center" },
         })
         .fromTo(
           ".landscape-image",
           { opacity: 0, y: 50 },
-          { opacity: 1, y: 0 }
+          { opacity: 1, y: 0 }, '<'
         );
-        const tl1 = gsap.timeline({
+      const tl1 = gsap.timeline({
         scrollTrigger: {
           trigger: ".svg-block",
           start: "top center",
           end: "+=250",
-          scrub: 1,
+          toggleActions: "play none none reverse",
         },
       });
-      tl1.from(".icon-shape", { drawSVG: 0, stagger: 1, });
+      tl1.from(".icon-shape", { drawSVG: 0, stagger: 0.3, duration: 2 });
     },
     { scope: container }
   );
