@@ -43,13 +43,14 @@ export default function CompetitionJourney() {
           trigger: ".journey-image-box",
           start: "bottom center",
           end: "+=200",
-          scrub: true,
+          toggleActions: "play none none reverse",
         },
       });
       tl1.from(split.chars, {
         yPercent: 120,
-        stagger: { each: 0.1, from: "edges" },
+        stagger: { each: 0.02, from: "center" },
         ease: "power3.out",
+        duration: 0.3,
       });
 
       timelineBlockArray.forEach((_, index) => {
@@ -60,40 +61,55 @@ export default function CompetitionJourney() {
             mask: "chars",
           }
         );
+        const split1a = SplitText.create(
+          `.timeline-block:nth-child(${index + 1}) h3`,
+          {
+            type: "chars",
+            mask: "chars",
+          }
+        );
+        const split1b = SplitText.create(
+          `.timeline-block:nth-child(${index + 1}) .associated-text`,
+          {
+            type: "chars",
+            mask: "chars",
+          }
+        );
         const tl2 = gsap.timeline({
           scrollTrigger: {
             trigger: ` .timeline-block:nth-child(${index + 1})`,
             start: "top center",
             end: "+=150",
-            scrub: true,
+            toggleActions: "play none none reverse",
           },
         });
         tl2
           .from(`.timeline-block:nth-child(${index + 1}) img`, {
-            opacity: 0,
             scale: 0,
             y: -100,
           })
-          // .from(`.timeline-block:nth-child(${index + 1}) .timeline-line`, {
-          //   opacity: 0,
-          //   scaleY: 0,
-          //   transformOrigin: "top",
-          //   y: -100,
-          // })
-          .from(`.timeline-block:nth-child(${index + 1}) h3`, {
-            y: 100,
-            opacity: 0,
+          .from(split1a.chars, {
+            yPercent: 100,
             ease: "power4.out",
-            duration: 3,
+            stagger: 0.008,
+            duration: 0.3,
           })
-          .from(split1.chars, { yPercent: 120, stagger: 0.3 })
+          .from(split1.chars, {
+            yPercent: 120,
+            stagger: 0.005,
+            duration: 0.3,
+            ease: "power3.out",
+          })
           .from(
-            `.timeline-block:nth-child(${index + 1}) .associated-text`,
+            split1b.chars,
             {
               opacity: 0,
-              y: 100,
+              filter: "blur(5px)",
+              y: 40,
+              stagger: 0.005,
+              duration: 0.3,
             },
-            "<1"
+            "<0.2"
           );
         //
         const tlLine = gsap.timeline({
@@ -113,7 +129,7 @@ export default function CompetitionJourney() {
             `.timeline-block:nth-child(${
               index + 1
             }) .competition-list:nth-child(${listIndex + 1}) p`,
-            { type: "chars,words", mask: "words" }
+            { type: "chars,words", mask: "chars" }
           );
           const tl3 = gsap.timeline({
             scrollTrigger: {
@@ -122,37 +138,43 @@ export default function CompetitionJourney() {
               }) .competition-list:nth-child(${listIndex + 1})`,
               start: "top center",
               end: "+=250",
-              scrub: true,
+              toggleActions: "play none none reverse",
             },
           });
           tl3
-            .from(split2.words, {
+            .from(split2.chars, {
               yPercent: -120,
-              stagger: { each: 0.3 },
+              stagger: 0.008,
+              ease: "power3.out",
+              duration: 0.3,
             })
             .to(
               `.timeline-block:nth-child(${
                 index + 1
               }) .competition-list:nth-child(${listIndex + 1}) li`,
-              { opacity: 1, x: 0, stagger: 0.6 }
+              { opacity: 1, stagger: 0.1, ease: "power4.in" },
+              "<"
             );
         });
-        //
         const split3 = SplitText.create(
           `.timeline-block:nth-child(${index + 1}) .concluding`,
-          { type: "words" }
+          { type: "words, chars" }
         );
         const tl4 = gsap.timeline({
           scrollTrigger: {
             trigger: `.timeline-block:nth-child(${index + 1}) .concluding`,
             start: "top center",
             end: "+=100",
-            scrub: true,
+            toggleActions: "play none none reverse",
           },
         });
-        tl4.from(split3.words, {
+        tl4.from(split3.chars, {
           opacity: 0,
-          stagger: { each: 0.3 },
+          filter: "blur(5px)",
+          y: 50,
+          stagger: 0.005,
+          duration: 0.2,
+          ease: "power3.out",
         });
 
         //

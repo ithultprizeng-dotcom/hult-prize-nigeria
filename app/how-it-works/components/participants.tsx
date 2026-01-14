@@ -14,70 +14,66 @@ export default function Participants() {
   useGSAP(
     () => {
       const split1 = SplitText.create(".participant-heading", {
-        type: "words",
-        mask: "words",
+        type: "chars, words",
+        mask: "chars",
       });
       const split2 = SplitText.create(".participant-subText", {
         type: "lines",
         mask: "lines",
       });
       const split3 = SplitText.create(".split-3", {
-        type: "words",
-        mask: "words",
+        type: "chars, words",
+        mask: "chars",
       });
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".trigger-one",
           start: "top center",
           end: "+=200",
-          scrub: true,
+          toggleActions: "play none none reverse",
         },
+        defaults: { ease: "power3.out", yPercent: 120 },
       });
-      tl.from(split1.words, {
-        yPercent: 120,
-        stagger: 0.1,
-        ease: "power2.out",
+      tl.from(split1.chars, {
+        stagger: 0.01,
       }).from(split2.lines, {
-        yPercent: 120,
-        stagger: 0.2,
-        ease: "power4.out",
+        stagger: 0.08,
       });
       const tl2 = gsap.timeline({
         scrollTrigger: {
           trigger: ".trigger-two",
           start: "bottom bottom",
           end: "+=300",
-          scrub: true,
+          toggleActions: "play none none reverse",
         },
       });
       tl2.to(".trigger-two li", {
         opacity: 1,
-        x: 0,
-        transformOrigin: "left",
-        stagger: 0.2,
-        ease: "power3.out",
+        stagger: 0.08,
+        ease: "power4.out",
+        duration: 0.3,
       });
       const tl3 = gsap.timeline({
         scrollTrigger: {
           trigger: ".trigger-three",
           start: "bottom bottom",
           end: "+=300",
-          scrub: true,
+          toggleActions: "play none none reverse",
         },
       });
       tl3
-        .from(split3.words, {
+        .from(split3.chars, {
           filter: "blur(4px)",
           opacity: 0,
-          stagger: 0.1,
+          stagger: 0.01,
+          y: 50,
           ease: "power2.inOut",
         })
         .to(".trigger-three li", {
           opacity: 1,
-          x: 0,
-          transformOrigin: "left",
-          stagger: 0.2,
-          ease: "power3.out",
+          stagger: 0.08,
+          ease: "power4.out",
+          duration: 0.3,
         });
     },
     { scope: container }
@@ -93,7 +89,7 @@ export default function Participants() {
           to:
         </p>
       </div>
-      <section className="flex gap-8 flex-wrap justify-stretch items-stretch trigger-two ">
+      <section className="flex gap-8 flex-wrap trigger-two">
         {eligibleParticipants.map((each, index) => (
           <ParticipantsList text={each} key={index} imageSrc={list_orb} />
         ))}
