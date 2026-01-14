@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Figtree } from "next/font/google";
+import { Figtree, Cabin } from "next/font/google";
 import "./globals.css";
 import Footer from "@/src/components/layout/Footer";
 import Header from "@/src/components/layout/Header";
+import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   title: "Hult Prize Nigeria",
@@ -79,7 +80,36 @@ const figtree = Figtree({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-figtree",
 });
+const cabin = Cabin({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cabin",
+});
 
+const gillSans = localFont({
+  src: [
+    {
+      path: "../public/fonts/gill-sans/Gill Sans Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/gill-sans/Gill Sans Medium.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/gill-sans/Gill Sans Bold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/gill-sans/Gill Sans Heavy.otf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -87,7 +117,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${figtree.variable} mx-auto max-w-[1440px]`}>
+      <body
+        className={`${figtree.variable} ${cabin.variable} ${gillSans.className} mx-auto max-w-[1440px]`}
+      >
         <Header />
         {children}
         <Footer />
