@@ -19,7 +19,7 @@ export default function Team() {
   }, []);
 
   return (
-    <main className="px-12">
+    <main className="px-8 md:px-12">
       <section className="flex flex-col items-center mb-20 mt-8">
         <h2 className="font-figtree font-bold tracking-[-0.02em] text-hero text-black leading-[1.2]">
           The Hult Pulse
@@ -30,11 +30,11 @@ export default function Team() {
         </p>
       </section>
       <section className="flex w-full gap-10 bg-[#cde8df] rounded-2xl mb-24 flex-col md:flex-row">
-        <article className="flex-1 flex flex-col pl-8 py-12">
-          <h3 className="font-bold text-4xl leading-[1.2] font-figtree text-aloe">
+        <article className="flex-1 flex flex-col px-6 md:pl-8 md:pr-0 py-12 text-pretty">
+          <h3 className="font-bold text-4xl leading-[1.2] font-figtree text-aloe text-pretty">
             Documenting the Path Toward Sustainable Change
           </h3>
-          <p className="mt-3 leading-[1.5] text-[#606060]">
+          <p className="mt-3 leading-[1.5] text-[#606060] text-pretty">
             Dive into the journeys of our finalists, learn best practices for
             social entrepreneurship in Nigeria, and get expert advice on
             developing your for-profit, for-people, and for-planet venture.
@@ -53,7 +53,7 @@ export default function Team() {
       </section>
 
       <section className="mb-20">
-        <h3 className="text-aloe font-semibold text-body-lg mb-8">
+        <h3 className="text-aloe font-bold font-figtree text-body-lg mb-8">
           Blog Posts for you:
         </h3>
         <section className="flex flex-wrap gap-10">
@@ -61,10 +61,10 @@ export default function Team() {
             ? blogData.map((data, index) => (
                 <BlogCard
                   key={index}
-                  id="the id"
-                  imageSrc="sdd"
-                  title="The blog post"
-                  author="Mr. Tom Jones"
+                  id={data.id}
+                  imageSrc={data.image_url}
+                  title={data.title.toLocaleLowerCase()}
+                  author={data.authour}
                 />
               ))
             : Array.from("abacus").map((item, index) => (
@@ -82,14 +82,14 @@ const BlogCard = ({ id, imageSrc, title, author }: BlogCardType) => {
     <article className="flex flex-col gap-6 w-[min(85vw,300px)] shrink-0 rounded-3xl bg-text-white pb-10 shadow-md">
       <div className="bg-aloe relative group overflow-clip w-full h-[250px] rounded-2xl shadow-2xl">
         <Image
-          src={blog_page_image}
+          src={imageSrc}
           alt="group photograh"
           fill
           className="object-cover group-hover:scale-120 duration-300 ease-out"
         />
       </div>
-      <div className="flex flex-col gap-0 pl-4">
-        <h3 className="font-bold text-black font-figtree text-body-lg capitalize leading-[1.3]">
+      <div className="flex flex-col gap-0 pl-4 pr-2">
+        <h3 className="font-bold text-black font-figtree text-body-lg capitalize leading-[1.3] mb-2">
           {title}
         </h3>
         <p className="font-body text-[#707070] text-body font-medium mb-6">
@@ -98,7 +98,7 @@ const BlogCard = ({ id, imageSrc, title, author }: BlogCardType) => {
 
         <Button
           text="read blog"
-          classnames="reversed button hov-pink bg-aloe grow-0 w-fit pr-6 pl-4 text-caption text-white font-normal hover:bg-black py-1"
+          classnames="reversed button hov-pink bg-aloe grow-0 w-fit pr-6 pl-4 text-caption text-white font-semibold hover:bg-black py-1 font-figtree"
           onclick={() => {
             router.push(`/blogs/${id}`);
           }}
