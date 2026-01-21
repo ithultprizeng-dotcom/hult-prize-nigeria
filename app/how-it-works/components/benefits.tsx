@@ -29,7 +29,7 @@ export default function Benefits() {
       });
       tl.from(split.chars, {
         stagger: { each: 0.05, from: "center" },
-      }).from(split1.words, { stagger: { each: 0.07, from: "edges" } }, "<0.2");
+      }).from(split1.words, { stagger: { each: 0.007, from: "edges" } }, "<0.2");
     },
     { scope: container }
   );

@@ -43,7 +43,7 @@ export default function Challenge() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".challenge-container",
-          start: "top center",
+          start: "top 65%",
           end: "+=250",
           toggleActions: "play none none reverse",
         },
@@ -59,7 +59,7 @@ export default function Challenge() {
       const tl2 = gsap.timeline({
         scrollTrigger: {
           trigger: ".challenge-second-trigger",
-          start: "top center",
+          start: "top 65%",
           end: "+=250",
           toggleActions: "play none none reverse",
         },
@@ -78,7 +78,7 @@ export default function Challenge() {
       const tl3 = gsap.timeline({
         scrollTrigger: {
           trigger: ".image-trigger",
-          start: "top center",
+          start: "top 65%",
           end: "+=150",
           toggleActions: "play none none reverse",
         },
@@ -92,7 +92,7 @@ export default function Challenge() {
       const tl4 = gsap.timeline({
         scrollTrigger: {
           trigger: ".challenge-third-trigger",
-          start: "top center",
+          start: "top 65%",
           end: "+=250",
           toggleActions: "play none none reverse",
         },

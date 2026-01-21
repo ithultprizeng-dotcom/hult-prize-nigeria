@@ -128,7 +128,7 @@ export default function CompetitionJourney() {
           const split2 = SplitText.create(
             `.timeline-block:nth-child(${
               index + 1
-            }) .competition-list:nth-child(${listIndex + 1}) p`,
+            }) .competition-list:nth-child(${listIndex + 1}) > p`,
             { type: "chars,words", mask: "chars" }
           );
           const tl3 = gsap.timeline({

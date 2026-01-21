@@ -25,7 +25,7 @@ export function CallToAction() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".cta-text-block",
-          start: "top center",
+          start: "top 65%",
           end: "+=100",
           toggleActions: "play none none reverse",
         },

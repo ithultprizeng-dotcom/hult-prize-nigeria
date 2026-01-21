@@ -67,7 +67,7 @@ export function JudgingCriteria() {
           x: -200,
           stagger: 0.1,
           opacity: 0,
-          ease: "power3.in",
+          ease: "power3.inOut",
           duration: 0.8,
         })
         .from(
@@ -76,7 +76,7 @@ export function JudgingCriteria() {
             x: 200,
             stagger: 0.1,
             opacity: 0,
-            ease: "power3.in",
+            ease: "power3.inOut",
             duration: 0.8,
           },
           "<"

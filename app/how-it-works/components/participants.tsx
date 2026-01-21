@@ -25,10 +25,11 @@ export default function Participants() {
         type: "chars, words",
         mask: "chars",
       });
+      const startPosition = "top 65%";
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".trigger-one",
-          start: "top center",
+          start: startPosition,
           end: "+=200",
           toggleActions: "play none none reverse",
         },
@@ -42,7 +43,7 @@ export default function Participants() {
       const tl2 = gsap.timeline({
         scrollTrigger: {
           trigger: ".trigger-two",
-          start: "bottom bottom",
+          start: startPosition,
           end: "+=300",
           toggleActions: "play none none reverse",
         },
@@ -56,7 +57,7 @@ export default function Participants() {
       const tl3 = gsap.timeline({
         scrollTrigger: {
           trigger: ".trigger-three",
-          start: "bottom bottom",
+          start: startPosition,
           end: "+=300",
           toggleActions: "play none none reverse",
         },
