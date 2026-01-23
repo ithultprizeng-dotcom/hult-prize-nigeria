@@ -160,7 +160,7 @@ export const competition_timeline: CompetitionTimelineType[] = [
       bulletPointsContent: [
         "Compete with the best teams in Nigeria",
         "Pitch before senior investors and excutives",
-        "Receive deepere mentorship",
+        "Receive deeper mentorship",
         "Improve prototypes",
         "Strengthen market strategy",
       ],
@@ -194,7 +194,7 @@ export const competition_timeline: CompetitionTimelineType[] = [
     additionalContent: {
       contentHeading: "At the global finals",
       contentBulletPoints: [
-        "Finalists pitch against teams fromover 120 countries",
+        "Finalists pitch against teams from over 120 countries",
         "One winning team receives $1 million USD in startup funding",
         "All finalists receive global exposure and investor connections",
       ],

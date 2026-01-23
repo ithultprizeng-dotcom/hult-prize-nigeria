@@ -8,7 +8,7 @@ const ParticipantsList = ({
   imageSrc: StaticImageData;
 }) => {
   return (
-    <li className="flex gap-4 items-center px-8 py-5 border-[rgb(64,64,144)] border-[1.5px] shadow-xl hover:shadow-2xl hover:translate-y-[-5px] hover:border-pink duration-300 ease-in-out rounded-lg opacity-0 translate-x-10">
+    <li className="flex gap-4 items-center px-8 py-5 border-[rgb(64,64,144)] border-[1.5px] shadow-xl hover:shadow-2xl hover:translate-y-[-5px] hover:border-pink duration-300 ease-in-out rounded-lg opacity-0">
       <Image
         src={imageSrc}
         alt="orb"

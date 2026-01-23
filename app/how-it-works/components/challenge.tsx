@@ -43,39 +43,27 @@ export default function Challenge() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".challenge-container",
-          start: "top center",
+          start: "top 65%",
           end: "+=250",
-          scrub: true,
+          toggleActions: "play none none reverse",
         },
+        defaults: { yPercent: 120, ease: "power3.out", stagger: 0.1 },
       });
+
       gsap.set(".challenge-container", { autoAlpha: 1 });
-      tl.from(split1.words, {
-        yPercent: 120,
-        ease: "power3.out",
-        stagger: 0.1,
-      })
-        .from(
-          split2.words,
-          {
-            yPercent: 120,
-            ease: "power2.inOut",
-            stagger: 0.1,
-          },
-          "<0.3"
-        )
-        .from(
-          split3.lines,
-          { yPercent: 120, ease: "power3.out", stagger: 0.2 },
-          "<0.3"
-        );
+
+      tl.from(split1.words, {})
+        .from(split2.words, {}, "<0.2")
+        .from(split3.lines, {}, "<0.1");
 
       const tl2 = gsap.timeline({
         scrollTrigger: {
           trigger: ".challenge-second-trigger",
-          start: "top center",
+          start: "top 65%",
           end: "+=250",
-          scrub: true,
+          toggleActions: "play none none reverse",
         },
+        defaults: { ease: "power3.out", yPercent: 120, stagger: 0.1 },
       });
       gsap.set(
         [
@@ -85,38 +73,32 @@ export default function Challenge() {
         ],
         { autoAlpha: 1 }
       );
-      tl2
-        .from(split4.words, { yPercent: 120, stagger: 0.1 })
-        .from(split5.lines, { yPercent: 120, stagger: 0.2 }, "<0.3");
+      tl2.from(split4.words, {}).from(split5.lines, {}, "<0.2");
 
       const tl3 = gsap.timeline({
         scrollTrigger: {
           trigger: ".image-trigger",
-          start: "top center",
+          start: "top 65%",
           end: "+=150",
-          scrub: true,
+          toggleActions: "play none none reverse",
         },
       });
       tl3.from(".image-trigger", {
         scale: 0,
         opacity: 0,
         transformOrigin: "right center",
+        ease: "power3.in",
       });
       const tl4 = gsap.timeline({
         scrollTrigger: {
           trigger: ".challenge-third-trigger",
-          start: "top center",
+          start: "top 65%",
           end: "+=250",
-          scrub: true,
+          toggleActions: "play none none reverse",
         },
+        defaults: { ease: "power3.out", yPercent: 120, stagger: 0.1 },
       });
-      tl4
-        .from(split6.words, {
-          opacity: 0,
-          yPercent: 120,
-          stagger: 0.1,
-        })
-        .from(split7.lines, { yPercent: 120, stagger: 0.3, ease: 'power4.inOut' }, "<0.3");
+      tl4.from(split6.words, {}).from(split7.lines, {}, "<0.2");
     },
     { scope: container }
   );
