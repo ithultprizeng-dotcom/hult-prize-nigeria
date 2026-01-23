@@ -130,7 +130,7 @@ const BlogCard = ({ id, imageSrc, title, author }: BlogCardType) => {
           className="object-cover group-hover:scale-120 duration-300 ease-out"
         />
       </div>
-      <div className="flex flex-col gap-0 pl-4 pr-2">
+      <div className="flex flex-col gap-0 pl-4 pr-2 flex-1">
         <h3 className="font-bold text-black font-figtree text-body-lg capitalize leading-[1.3] mb-2">
           {title.replaceAll("\\", "")}
         </h3>
@@ -140,7 +140,7 @@ const BlogCard = ({ id, imageSrc, title, author }: BlogCardType) => {
 
         <Button
           text="read blog"
-          classnames="reversed button hov-pink bg-aloe grow-0 w-fit pr-6 pl-4 text-caption text-white font-semibold hover:bg-black py-1 font-figtree"
+          classnames="reversed button hov-pink bg-aloe grow-0 w-fit pr-6 pl-4 text-caption text-white font-semibold hover:bg-black py-1 font-figtree mt-auto"
           onclick={() => {
             router.push(`/blogs/${id}`);
           }}
