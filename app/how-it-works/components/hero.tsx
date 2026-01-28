@@ -94,13 +94,13 @@ export default function Hero() {
         <h3 className="font-body font-semibold text-pink text-3xl capitalize split-2 invisible">
           How It Works
         </h3>
-        <p className="mt-4 font-body font-normal text-body text-[#707070] max-w-prose lg:max-w-[45ch] split-3 invisible">
+        <p className="mt-4 font-body font-normal text-body text-[#707070] max-w-prose text-balance split-3 invisible">
           The Hult Prize is the world&rsquo;s largest student-led social
           entrepreneurship competition. At Hult Prize Nigeria, students are
           empowered to build sustainable, for-profit startups that solve
           Nigeria&rsquo;s most pressing social and environmental challenges.
         </p>
-        <p className="font-body font-normal text-body text-[#707070] max-w-prose lg:max-w-[45ch] split-3 invisible">
+        <p className="font-body font-normal text-body text-[#707070] max-w-prose text-balance split-3 invisible">
           Here is a detailed explanation of how the journey works &#40;from
           registration to global finals&#41; and how you can transform your idea
           into a real company with global backing.
