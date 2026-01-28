@@ -1,5 +1,5 @@
 import { fetchSingleBlogPost } from "@/src/lib/services";
-import BlogContent from "./BlogContent"; // Your client code below
+import BlogContent from "./BlogContent";
 import { Metadata } from "next";
 
 type Props = {
