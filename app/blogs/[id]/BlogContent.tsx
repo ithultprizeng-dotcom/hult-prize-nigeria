@@ -30,7 +30,7 @@ export default function BlogContent({ initialPost }: { initialPost: BlogAPIRespo
         className="w-full object-contain rounded-2xl"
       />
       <section
-        className="blog-content flex flex-col gap-4 max-w-[80ch] leading-[1.5]"
+        className="blog-content flex flex-col gap-4 leading-[1.5]"
         dangerouslySetInnerHTML={{ __html: html }}
       ></section>
     </main>
