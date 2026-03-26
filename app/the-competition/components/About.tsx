@@ -8,7 +8,7 @@ export function AboutTheCompetition() {
   return (
     <section className="px-4 sm:px-8 my-25 flex flex-col gap-20 mx-auto">
       <article className="flex gap-8 items-stretch">
-        <section className="flex-1 bg-gradient-to-b from-navy to-midnight rounded-3xl px-8 pb-8 py-4 flex flex-col justify-between text-text-white">
+        <section className="flex-1 bg-gradient-to-b from-[#618292] to-midnight rounded-3xl px-8 pb-8 py-4 flex flex-col justify-between text-text-white">
           <div className="flex justify-between items-center">
             <p className="[font-variant:small-caps]">
               Our Competittion <br /> by the Numbers
