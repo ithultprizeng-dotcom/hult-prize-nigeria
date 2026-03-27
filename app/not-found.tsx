@@ -14,7 +14,7 @@ export default function NotFound() {
         404
       </h2>
       <p className="font-body text-black text-body capitalize">
-        This page will be available soon.
+        Oops! The page you are looking for does not exist.
       </p>
       <Link
         href={"/"}

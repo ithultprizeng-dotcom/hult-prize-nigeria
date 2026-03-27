@@ -33,14 +33,13 @@ export interface NavlinksType {
 }
 
 export const NAVLINKS: NavlinksType[] = [
-  // { href: "competition", title: "the competition" },
+  { href: "/the-competition", title: "the competition" },
   { href: "/how-it-works", title: "how it works" },
   // { href: "get-involved", title: "get involved" },
   // { href: "hult-prize-winners", title: "winners + finalists" },
   // { href: "about-hult-prize", title: "about us" },
   { href: "/team", title: "our team" },
   { href: "/blogs", title: "blogs" },
-  { href: "/donate", title: "donate" },
 ];
 
 export const IMAGES: { [key: string]: StaticImageData } = {
