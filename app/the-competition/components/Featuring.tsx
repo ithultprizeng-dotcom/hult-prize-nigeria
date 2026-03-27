@@ -18,8 +18,8 @@ export function Featuring() {
 
 function FeatureItem({ id, text }: { id: string; text: string }) {
   return (
-    <div className="relative w-[min(85%,250px)] p-6 rounded-lg border-2 border-pink overflow-hidden shrink-0 flex items-center justify-center shadow-lg">
-      <span className="absolute -top-4 -left-3 font-figtree font-black text-main-heading leading-[1] -z-15 opacity-15 text-navy">
+    <div className="relative w-[min(85%,280px)] p-6 rounded-lg border-2 border-pink overflow-hidden shrink-0 flex items-center justify-center shadow-lg">
+      <span className="absolute top-0 left-0 lg:-top-4 lg:-left-3 font-figtree font-black text-main-heading leading-[1] -z-15 opacity-25 text-navy">
         {id}
       </span>
       <p className="font-figtree [font-variant:small-caps] leading-[1] text-body-lg font-[500]">
