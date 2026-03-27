@@ -26,7 +26,7 @@ export function AboutTheCompetition() {
             <span>Universties</span>
           </p>
         </section>
-        <section className="flex flex-col sm:flex-row sm:h-100 md:h-80 rounded-3xl bg-neutral-100  overflow-clip lg:flex-[2.5] gap-4 sm:items-center justify-between items-start shadow-sm">
+        <section className="flex flex-col sm:flex-row sm:h-100 md:h-80 rounded-3xl bg-neutral-100  overflow-clip lg:flex-[2.5] gap-12 md:gap-4 sm:items-center justify-between items-start shadow-sm">
           <div className="flex flex-col py-4 gap-4 justify-center px-4 md:px-8">
             <h4 className="text-3xl text-midnight font-figtree font-semibold">
               About The Event
@@ -51,7 +51,7 @@ export function AboutTheCompetition() {
       </article>
 
       <article className="flex flex-col lg:flex-row gap-8 lg:items-stretch">
-        <section className="flex flex-col sm:flex-row sm:h-100 md:h-80 rounded-3xl bg-neutral-100  overflow-clip lg:flex-[2.5] gap-4 sm:items-center justify-between items-start shadow-sm">
+        <section className="flex flex-col sm:flex-row sm:h-100 md:h-80 rounded-3xl bg-neutral-100  overflow-clip lg:flex-[2.5] gap-12 md:gap-4 sm:items-center justify-between items-start shadow-sm">
           <div className="flex flex-col py-4 gap-4 justify-center px-4 md:px-8">
             <h4 className="text-3xl text-midnight font-figtree font-semibold">
               Beyond the Competition
