@@ -22,8 +22,8 @@ export function AboutTheCompetition() {
             />
           </div>
           <p className="flex flex-col gap-0 items-start justify-center">
-            <span className="text-5xl font-figtree">15+</span>{" "}
-            <span>Universties</span>
+            <span className="text-5xl font-figtree">80+</span>{" "}
+            <span>Institutions</span>
           </p>
         </section>
         <section className="flex flex-col sm:flex-row sm:h-100 md:h-80 rounded-3xl bg-neutral-100  overflow-clip lg:flex-[2.5] gap-12 md:gap-4 sm:items-center justify-between items-start shadow-sm">
