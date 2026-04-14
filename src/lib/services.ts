@@ -65,7 +65,7 @@ export async function fetchUpcomingEvents(): Promise<EventsAPIResponseData[]> {
 
 export async function fetchPartners(): Promise<PartnersAPIResponseData[]> {
   const data: PartnersAPIResponseData[] = await fetchData(
-    "/partners",
+    "/partner",
     "Sorry, we are unable to fetch the partners at this time"
   );
   return data;
