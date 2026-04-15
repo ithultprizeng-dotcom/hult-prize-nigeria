@@ -4,6 +4,7 @@ import {
   EventsAPIResponse,
   EventsAPIResponseData,
   TeamAPIResponse,
+  PartnersAPIResponseData,
 } from "./types";
 
 const BASEURL = process.env.NEXT_PUBLIC_API_BASEURL;
@@ -11,17 +12,17 @@ const BASEURL = process.env.NEXT_PUBLIC_API_BASEURL;
 export async function fetchBlogs(): Promise<BlogAPIResponse> {
   const data: BlogAPIResponse = await fetchData(
     "/blog",
-    "Sorry, we are unable to fetch the blogs at this time"
+    "Sorry, we are unable to fetch the blogs at this time",
   );
   return data;
 }
 
 export async function fetchSingleBlogPost(
-  blogId: string
+  blogId: string,
 ): Promise<BlogAPIResponseData> {
   const data: BlogAPIResponseData = await fetchData(
     `/blog/${blogId}`,
-    "Sorry, we could not fetch your blog at this time"
+    "Sorry, we could not fetch your blog at this time",
   );
   return data;
 }
@@ -29,7 +30,7 @@ export async function fetchSingleBlogPost(
 export async function fetchBOGTeam(): Promise<TeamAPIResponse[]> {
   const response: TeamAPIResponse[] = await fetchData(
     "/team?role_type=BOG",
-    "Sorry we could not fetch the Board of Governance team at this time"
+    "Sorry we could not fetch the Board of Governance team at this time",
   );
   console.log(response);
   return response;
@@ -38,7 +39,7 @@ export async function fetchBOGTeam(): Promise<TeamAPIResponse[]> {
 export async function fetchExecutiveTeam(): Promise<TeamAPIResponse[]> {
   const response: TeamAPIResponse[] = await fetchData(
     "/team?role_type=EX",
-    "Sorry we could not fetch the Executive team at this time"
+    "Sorry we could not fetch the Executive team at this time",
   );
   console.log("The EXECUTIVE TEAM: ", response);
   return response;
@@ -47,7 +48,7 @@ export async function fetchExecutiveTeam(): Promise<TeamAPIResponse[]> {
 export async function fetchCampusDirectorTeam(): Promise<TeamAPIResponse[]> {
   const response: TeamAPIResponse[] = await fetchData(
     "/team?role_type=CD",
-    "Sorry we could not fetch the Campus Director team at this time"
+    "Sorry we could not fetch the Campus Director team at this time",
   );
   console.log("The CAMPUS DIRECTOR TEAM: ", response);
   return response;
@@ -56,11 +57,21 @@ export async function fetchCampusDirectorTeam(): Promise<TeamAPIResponse[]> {
 export async function fetchUpcomingEvents(): Promise<EventsAPIResponseData[]> {
   const response: EventsAPIResponse = await fetchData(
     "/event?status=UPCOMING",
-    "Sorry, we cannot fetch the Upcoming Events at this time. Please try again"
+    "Sorry, we cannot fetch the Upcoming Events at this time. Please try again",
   );
   console.log("UPCOMING EVENTS", response.data);
   return response.data;
 }
+
+export async function fetchPartners(): Promise<PartnersAPIResponseData[]> {
+  const data: PartnersAPIResponseData[] = await fetchData(
+    "/partner",
+    "Sorry, we are unable to fetch the partners at this time"
+  );
+  return data;
+}
+
+
 
 async function fetchData(endPoint: string, errorMessage: string) {
   if (!BASEURL) throw new Error("API baseURL is not defined!");

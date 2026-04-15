@@ -8,6 +8,7 @@ import Ecosystem from "@/src/components/layout/Ecosystem";
 import Testimonial from "@/src/components/layout/Testimonial";
 import Blogs from "@/src/components/layout/Blogs";
 import Events from "@/src/components/layout/Events";
+import Partners from "@/src/components/layout/Partners";
 const Media = dynamic(() => import("@/src/components/layout/Media"));
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <SectionDivisionTwo />
       <HomePageAbout />
       <Features />
+      <Partners />
       <Ideas />
       <Media />
       <Blogs />

@@ -75,3 +75,9 @@ export interface EventCardType {
   registrationLink: string;
   eventType: EventType;
 }
+
+export interface PartnersAPIResponseData {
+  id: string;
+  name: string;
+  image_url: string;
+}
