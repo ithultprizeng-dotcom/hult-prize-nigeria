@@ -9,6 +9,7 @@ import Testimonial from "@/src/components/layout/Testimonial";
 import Blogs from "@/src/components/layout/Blogs";
 import Events from "@/src/components/layout/Events";
 import Partners from "@/src/components/layout/Partners";
+import Sponsors from "@/src/components/layout/Sponsors";
 const Media = dynamic(() => import("@/src/components/layout/Media"));
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <HomePageAbout />
       <Features />
       <Partners />
+      <Sponsors />
       <Ideas />
       <Media />
       <Blogs />

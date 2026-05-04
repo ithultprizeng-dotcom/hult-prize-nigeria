@@ -65,12 +65,19 @@ export async function fetchUpcomingEvents(): Promise<EventsAPIResponseData[]> {
 
 export async function fetchPartners(): Promise<PartnersAPIResponseData[]> {
   const data: PartnersAPIResponseData[] = await fetchData(
-    "/partner",
+    "/partner?type=partner",
     "Sorry, we are unable to fetch the partners at this time"
   );
   return data;
 }
 
+export async function fetchSponsor(): Promise<PartnersAPIResponseData[]> {
+  const data: PartnersAPIResponseData[] = await fetchData(
+    "/partner?type=sponsor",
+    "Sorry, we are unable to fetch the sponsors at this time"
+  );
+  return data;
+}
 
 
 async function fetchData(endPoint: string, errorMessage: string) {
