@@ -50,11 +50,11 @@ export const metadata: Metadata = {
     title: "Hult Prize Nigeria: Win $1M to Launch Your Social Startup",
     description:
       "Nigeria's leading platform for student entrepreneurs. Compete for $1,000,000 in seed funding by building a scalable, profitable venture aligned with the UN Sustainable Development Goals.",
-    url: "https://www.hultprize-ng.com/",
+    url: "https://www.hultprize-ng.org/",
     siteName: "Hult Prize Nigeria",
     images: [
       {
-        url: "https://www.hultprize-ng.com/HP_NigeriaHP.png",
+        url: "https://www.hultprize-ng.org/HP_NigeriaHP.png",
         width: 1200,
         height: 630,
         alt: "Hult Prize Nigeria Logo and Challenge Banner",
